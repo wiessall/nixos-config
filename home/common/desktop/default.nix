@@ -9,7 +9,7 @@
   };
 
   home.packages = with pkgs; [
-    bitwarden-desktop #new
+#    bitwarden-desktop #new
     gimp
     inkscape
     libreoffice-qt-fresh
