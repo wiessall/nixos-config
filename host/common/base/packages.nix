@@ -8,7 +8,6 @@
     less
     ripgrep
     rsync
-    sed
     tree
     unzip
     vim

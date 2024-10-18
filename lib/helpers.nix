@@ -29,8 +29,7 @@
         username = user;
       };
       modules = [
-        inputs.catppuccin.homeManagerModules.catppuccin
-        ../home
+        /home/tristan/nixos-config/home/default.nix
       ];
     };
 
@@ -42,6 +41,7 @@
       pkgsInput ? inputs.unstable,
     }:
     pkgsInput.lib.nixosSystem {
+      system = "x86_64-linux";
       specialArgs = {
         inherit
           self
@@ -54,9 +54,6 @@
           ;
       };
       modules = [
-        inputs.agenix.nixosModules.default
-        inputs.lanzaboote.nixosModules.lanzaboote
-        inputs.libations.nixosModules.libations
         ../host
       ];
     };

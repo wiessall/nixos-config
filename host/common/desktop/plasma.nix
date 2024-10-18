@@ -27,9 +27,9 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   # Plasma-specific configurations
-  environment.systemPackages = with pkgs; [
-    plasma-desktop
-  ];
+#  environment.systemPackages = with pkgs; [
+#    plasma-desktop
+#  ];
 
  
 }

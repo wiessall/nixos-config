@@ -7,7 +7,10 @@
 }:
 {
   imports = [
+    
     ./locale.nix
+    ./hardware.nix
+    ../services/openssh.nix
   ];
 
   networking = {

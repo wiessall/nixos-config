@@ -5,7 +5,7 @@
   ...
 }:
 let
-  theme = import "${self}/lib/theme" { inherit pkgs; };
+  theme = null; #import "${self}/lib/theme" { inherit pkgs; };
 in
 {
   imports = [
@@ -65,7 +65,7 @@ in
 #        monospace = [ "${theme.fonts.monospace.name}" ];
 #        emoji = [ "${theme.fonts.emoji.name}" ];
 #      };
-    };
+#    };
   };
 }
 
