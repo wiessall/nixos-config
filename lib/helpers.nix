@@ -29,6 +29,8 @@
         username = user;
       };
       modules = [
+	inputs.plasma-manager.homeManagerModules.plasma-manager
+
         /home/tristan/nixos-config/home/default.nix
       ];
     };
