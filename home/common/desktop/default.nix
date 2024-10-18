@@ -9,9 +9,10 @@
   };
 
   home.packages = with pkgs; [
-#    bitwarden-desktop #new
+#    bitwarden-desktop
     gimp
     inkscape
+    kdePackages.qtstyleplugin-kvantum
     libreoffice-qt-fresh
     mattermost-desktop
     musicpod
