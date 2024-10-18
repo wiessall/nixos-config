@@ -11,9 +11,9 @@
     #
     workspace = {
       clickItemTo = "select";
-      lookAndFeel = "org.kde.breezedark.desktop";
+      lookAndFeel = "org.kde.otto.desktop";
       cursor.theme = "Bibata-Modern-Ice";
-      iconTheme = "Papirus-Dark";
+      iconTheme = "McMojave-circle-dark";
       wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
     };
 
