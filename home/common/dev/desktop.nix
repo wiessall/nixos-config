@@ -3,8 +3,8 @@
   programs.vscode = {
     enable = true;
   };
-  extensions = [
-   vim 
+  extensions = with pkgs.vscode-extensions; [
+   vscode.vim 
   ];
 
 }
