@@ -21,7 +21,7 @@
     hotkeys.commands."launch-konsole" = {
       name = "Launch Konsole";
       key = "Meta+T";
-      command = "konsole";
+      command = "alacritty";
     };
 
     panels = [
@@ -42,7 +42,6 @@
         location = "top";
         height = 26;
 	floating = true;
-	hiding = "dodgewindows";
         widgets = [ 
           "org.kde.plasma.appmenu"
           "org.kde.plasma.panelspacer"
