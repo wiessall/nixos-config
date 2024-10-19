@@ -110,4 +110,19 @@ home-manager switch --flake .#tristan@vm
 
 ---
 
-Let me know if this covers everything or if you want additional details added!
+### TODOS
+ - multimedia keys broken
+   + Fix in KDE 6.1: https://github.com/nix-community/plasma-manager/issues/119
+   + How to use KDE 6.1 from unstable: https://discourse.nixos.org/t/how-to-use-nixos-unstable-for-some-packages-only/36337/3
+   + shortcuts not working related?
+ - secure boot
+ - disk encryption
+ - secret handling
+ - dev shell/python setup
+ - plugins
+   - vscode
+   - firefox
+   - nvim
+ - drivers
+   - nVidia GPU
+

@@ -55,6 +55,7 @@
           ;
       };
       modules = [
+	inputs.lanzaboote.nixosModules.lanzaboote
         ../host
       ];
     };

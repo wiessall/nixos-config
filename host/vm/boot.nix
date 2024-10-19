@@ -1,7 +1,16 @@
+{ pkgs, lib, ... }:
 {
-  boot.loader.grub = {
-    enable = true;
-    device = "/dev/sda";
+  boot = {
+    #enable secure boot
+    bootspec.enable = true; 
+    #disable systemd boot
+    loader.systemd-boot.enable = lib.mkForce false;
+
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/etc/secureboot";
+    };
+
   };
 }
 

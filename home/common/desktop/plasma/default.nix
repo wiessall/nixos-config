@@ -5,7 +5,7 @@
 
   programs.plasma = {
     enable = true;
-    overrideConfig = true;
+#    overrideConfig = true;
 
     #
     # Some high-level settings:
