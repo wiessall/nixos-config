@@ -29,9 +29,9 @@
       {
         location = "bottom";
 	floating = true;
-	hiding = "autohide";
+	hiding = "dodgewindows";
 	lengthMode = "fit";
-	height = 42;
+	height = 64;
         widgets = [
           "org.kde.plasma.kickoff"
           "org.kde.plasma.icontasks"
@@ -41,10 +41,22 @@
       {
         location = "top";
         height = 26;
+	floating = true;
+	hiding = "dodgewindows";
         widgets = [ 
           "org.kde.plasma.appmenu"
           "org.kde.plasma.panelspacer"
-          "org.kde.plasma.digitalclock"
+	  {
+            name = "org.kde.plasma.digitalclock";
+	    config = {
+	      Appearance = {
+	        showDate = true;
+	        customDateFormat = "dd MMM";
+		showWeekNumbers = true;
+		dateDisplayFormat = 1;
+	      };
+	    };
+	  }
           "org.kde.plasma.panelspacer"
           "org.kde.plasma.systemtray"
         ];
@@ -134,7 +146,7 @@
         "Window Above Other Windows" = "none,,Keep Window Above Others";
         "Window Below Other Windows" = "none,,Keep Window Below Others";
         "Window Close" = "Meta+W,Alt+F4,Close Window";
-        "Window Fullscreen" = "none,,Make Window Fullscreen";
+        "Window Fullscreen" = "Meta+Up,,Make Window Fullscreen";
         "Window Grow Horizontal" = "none,,Expand Window Horizontally";
         "Window Grow Vertical" = "none,,Expand Window Vertically";
         "Window Lower" = "none,,Lower Window";

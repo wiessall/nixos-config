@@ -2,6 +2,10 @@
 {
   imports = [
     (./. + "/${desktop}")
+
+    ../dev
+
+    ./alacritty.nix
   ];
 
   programs = {
