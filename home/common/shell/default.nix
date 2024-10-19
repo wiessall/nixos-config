@@ -6,6 +6,7 @@ in
   imports = [
     ./bat.nix
     ./starship.nix
+    ./tmux.nix
     ./vim.nix
     ./zsh.nix
   ];

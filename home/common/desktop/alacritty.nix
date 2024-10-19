@@ -1,11 +1,11 @@
 { pkgs, self, ... }:
-let
-  theme = import "${self}/lib/theme" { inherit pkgs; };
-in
+#let
+#  theme = import "${self}/lib/theme" { inherit pkgs; };
+#in
 {
   programs.alacritty = {
     enable = true;
-    catppuccin.enable = true;
+#    catppuccin.enable = true;
     settings = {
       env = {
         TERM = "alacritty";
@@ -22,7 +22,7 @@ in
       scrolling.history = 100000;
 
       font = {
-        normal.family = "${theme.fonts.monospace.name}";
+#        normal.family = "${theme.fonts.monospace.name}";
         size = 14;
       };
     };
