@@ -2,9 +2,8 @@
 {
   programs.vscode = {
     enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      vscodevim.vim 
+    ];
   };
-  extensions = with pkgs.vscode-extensions; [
-   vscodevim.vim 
-  ];
-
 }

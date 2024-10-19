@@ -66,6 +66,17 @@
     # Some mid-level settings:
     #
     shortcuts = {
+      kmix = {
+        "decrease_microphone_volume" = "Microphone Volume Down";
+        "decrease_volume" = "Volume Down";
+        "decrease_volume_small" = "Shift+Volume Down";
+        "increase_microphone_volume" = "Microphone Volume Up";
+        "increase_volume" = "Volume Up";
+        "increase_volume_small" = "Shift+Volume Up";
+        "mic_mute" = ["Microphone Mute" "Meta+Volume Mute,Microphone Mute" "Meta+Volume Mute,Mute Microphone"];
+        "mute" = "Volume Mute";
+      };
+
       ksmserver = {
         "Lock Session" = [
           "Screensaver"
@@ -149,7 +160,7 @@
         "Window Grow Horizontal" = "none,,Expand Window Horizontally";
         "Window Grow Vertical" = "none,,Expand Window Vertically";
         "Window Lower" = "none,,Lower Window";
-        "Window Maximize" = "Meta+Up,Meta+PgUp,Maximize Window";
+        "Window Maximize" = "none,Meta+PgUp,Maximize Window";
         "Window Maximize Horizontal" = "none,,Maximize Window Horizontally";
         "Window Maximize Vertical" = "none,,Maximize Window Vertically";
         "Window Minimize" = "Meta+Down";
@@ -219,6 +230,62 @@
         "view_zoom_in" = ["Meta++" "Meta+=,Meta++" "Meta+=,Zoom In"];
         "view_zoom_out" = "Meta+-";
  
+      };
+
+      mediacontrol = {
+        "mediavolumedown" = "none,,Media volume down";
+        "mediavolumeup" = "none,,Media volume up";
+        "nextmedia" = "Media Next";
+        "pausemedia" = "Media Pause";
+        "playmedia" = "none,,Play media playback";
+        "playpausemedia" = "Media Play";
+        "previousmedia" = "Media Previous";
+        "stopmedia" = "Media Stop";
+      };
+
+      org_kde_powerdevil = {
+  "Decrease Keyboard Brightness" = "Keyboard Brightness Down";
+        "Decrease Screen Brightness" = "Monitor Brightness Down";
+        "Decrease Screen Brightness Small" = "Shift+Monitor Brightness Down";
+        "Hibernate" = "Hibernate";
+        "Increase Keyboard Brightness" = "Keyboard Brightness Up";
+        "Increase Screen Brightness" = "Monitor Brightness Up";
+        "Increase Screen Brightness Small" = "Shift+Monitor Brightness Up";
+        "PowerDown" = "Power Down";
+        "PowerOff" = "Power Off";
+        "Sleep" = "Sleep";
+        "Toggle Keyboard Backlight" = "Keyboard Light On/Off";
+        "Turn Off Screen" = [ ];
+        "powerProfile" = ["Battery" "Meta+B,Battery" "Meta+B,Switch Power Profile"];
+      };
+
+      plasmashell = {
+        "activate task manager entry 1" = "Meta+1";
+        "activate task manager entry 10" = "none,Meta+0,Activate Task Manager Entry 10";
+        "activate task manager entry 2" = "Meta+2";
+        "activate task manager entry 3" = "Meta+3";
+        "activate task manager entry 4" = "Meta+4";
+        "activate task manager entry 5" = "Meta+5";
+        "activate task manager entry 6" = "Meta+6";
+        "activate task manager entry 7" = "Meta+7";
+        "activate task manager entry 8" = "Meta+8";
+        "activate task manager entry 9" = "Meta+9";
+        "clear-history" = "none,,Clear Clipboard History";
+        "clipboard_action" = "Meta+Ctrl+X";
+        "cycle-panels" = "Meta+Alt+P";
+        "cycleNextAction" = "none,,Next History Item";
+        "cyclePrevAction" = "none,,Previous History Item";
+        "manage activities" = "Meta+Q";
+        "next activity" = "Meta+A,none,Walk through activities";
+        "previous activity" = "Meta+Shift+A,none,Walk through activities (Reverse)";
+        "repeat_action" = "none,Meta+Ctrl+R,Manually Invoke Action on Current Clipboard";
+        "show dashboard" = "Ctrl+F12";
+        "show-barcode" = "none,,Show Barcode…";
+        "show-on-mouse-pos" = "Meta+V";
+        "stop current activity" = "Meta+S";
+        "switch to next activity" = "none,,Switch to Next Activity";
+        "switch to previous activity" = "none,,Switch to Previous Activity";
+        "toggle do not disturb" = "none,,Toggle do not disturb";
       };
     };
 
