@@ -25,6 +25,9 @@
     nix-vscode-extensions.inputs.nixpkgs.follows = "unstable";
     vscode-server.url = "github:nix-community/nixos-vscode-server";
     vscode-server.inputs.nixpkgs.follows = "unstable";
+
+    firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    firefox-addons.inputs.nixpkgs.follows = "unstable";
   };
 
   outputs = { self, nixpkgs, unstable, ... }@inputs:

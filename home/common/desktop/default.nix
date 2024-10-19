@@ -9,7 +9,25 @@
   ];
 
   programs = {
-    firefox.enable = true;
+    firefox = {
+      enable = true;
+      languagePacks = [ "de" "en-US" ];
+      policies = {
+        DisableTelemetry = true;
+        DisableFirefoxStudies = true;
+	EnableTrackingProtection = {
+	  Value = true;
+	  Cryptomining = true;
+	  Fingerprinting = true;
+	};
+      };
+      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+	bitwarden
+	i-dont-care-about-cookies
+        ublock-origin
+	tridactyl
+      ];
+    };
   };
 
   home.packages = with pkgs; [
