@@ -13,12 +13,14 @@ in
         "users"
         "video"
         "wheel"
+        "vboxsf"
       ]
       ++ ifExists [
         "docker"
         "plugdev"
         "render"
         "lxd"
+
       ];
 
     openssh.authorizedKeys.keys = [

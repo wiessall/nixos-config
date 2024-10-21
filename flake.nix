@@ -8,6 +8,9 @@
 
     catppuccin.url = "github:catppuccin/nix";
 
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "unstable";
+
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "unstable";
 
