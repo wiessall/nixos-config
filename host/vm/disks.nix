@@ -1,5 +1,5 @@
 {
-  lib
+  lib,
   disks ? [
     "/dev/sda"
   ],
@@ -31,11 +31,11 @@ in
   disko.devices = {
     disk = {
       sda = {
-        device = buitlins.elemAt disks 0;
+        device = builtins.elemAt disks 0;
 	type = "disk";
 	content = {
 	  type = "gpt";
-	  partitiions = {
+	  partitions = {
 	    ESP = {
 	      start = "0%";
 	      end = "512MiB";

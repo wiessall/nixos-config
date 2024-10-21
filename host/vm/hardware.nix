@@ -9,7 +9,7 @@
   ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
-  fileSystems."/".device = "/dev/disk/by-uuid/25b62ea9-9cc2-40b7-ba12-6ece9ff080aa";
+#  fileSystems."/".device = "/dev/disk/by-uuid/25b62ea9-9cc2-40b7-ba12-6ece9ff080aa";
 
   # Add this test to confirm the file is being imported
   assertions = [
