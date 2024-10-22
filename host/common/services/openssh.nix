@@ -6,6 +6,7 @@ _: {
     settings = {
       PasswordAuthentication = true;
       PermitRootLogin = "yes";
+      allowSFTP = true;
     };
   };
 
