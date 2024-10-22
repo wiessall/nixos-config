@@ -3,10 +3,10 @@ _: {
     enable = true;
     ports = [ 22 ];
     openFirewall = true;
+    allowSFTP = true;
     settings = {
       PasswordAuthentication = true;
       PermitRootLogin = "yes";
-      allowSFTP = true;
     };
   };
 
