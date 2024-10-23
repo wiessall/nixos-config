@@ -15,7 +15,7 @@
       lookAndFeel = "org.kde.otto.desktop";
       cursor.theme = "Bibata-Modern-Ice";
       iconTheme = "McMojave-circle-dark";
-      wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
+      wallpaper = "./rolling_hills.jpg";
     };
 
     hotkeys.commands."launch-konsole" = {
