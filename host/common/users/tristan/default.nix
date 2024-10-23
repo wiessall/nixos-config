@@ -5,6 +5,7 @@ in
 {
   users.users.tristan = {
     isNormalUser = true;
+    hashedPassword = "$6$/XsnbKU4Era85r6h$mnQe6LQ/LHcCxmbvyXzPv9COONNiBvARl8KvcvzAk0V5jrPHvtrmR2.IthTTT3IHOzsztlg8ytTL3PiUJfmYD.";
     shell = pkgs.zsh;
     extraGroups =
       [

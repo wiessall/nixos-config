@@ -37,8 +37,7 @@ in
 	  type = "gpt";
 	  partitions = {
 	    ESP = {
-	      start = "0%";
-	      end = "512MiB";
+	      size = "512M";
 	      type = "EF00";
 	      content = {
 	        type = "filesystem";
@@ -48,8 +47,7 @@ in
 	    };
 	    # Luks encrypted data partition/subvolumes
 	    luks = {
-	      start = "512MiB";
-	      end = "100%";
+	      size = "100%";
 	      content = {
 	        type = "luks";
 		name = "${cryptroot}";
