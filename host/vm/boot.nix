@@ -2,7 +2,7 @@
 {
   boot = {
 #    loader.systemd-boot.enable = true;
-#    loader.efi.canTouchEfiVariables = true;
+    loader.efi.canTouchEfiVariables = true;
 #    loader.systemd-boot.device = "/dev/sda/sda1";
 
      initrd.systemd.enable = true;
