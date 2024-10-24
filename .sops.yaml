@@ -1,0 +1,10 @@
+keys:
+  - &user_tristan age1zcydzt4xdcswymjge4ey7pdqnfxm2x4tx2ddfwrcsmw8qtkatajsqfc84g
+  - &host_vm age1fhsrnck628qmanjg8d69sz5td56rw7t5m3hs5gl5cnepdln5sa6qf6t6lv
+creation_rules:
+  - path_regex: secrets.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+        - *user_tristan
+        - *host_vm
+
