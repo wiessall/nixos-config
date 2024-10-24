@@ -15,7 +15,7 @@
       lookAndFeel = "org.kde.otto.desktop";
       cursor.theme = "Bibata-Modern-Ice";
       iconTheme = "McMojave-circle-dark";
-      wallpaper = "./rolling_hills.jpg";
+      wallpaper = ./rolling_hills.jpg;
     };
 
     hotkeys.commands."launch-konsole" = {
