@@ -441,7 +441,7 @@
     "sops-nix": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs"
+          "unstable"
         ],
         "nixpkgs-stable": "nixpkgs-stable_2"
       },
