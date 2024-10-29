@@ -10,6 +10,7 @@
     
     ./locale.nix
     ./hardware.nix
+    ./sops.nix
     ../services/openssh.nix
   ];
 
