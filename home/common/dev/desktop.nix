@@ -2,7 +2,7 @@
 {
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
+    extensions = with pkgs.vscode-extensions.vscode-marketplace; [
       aaron-bond.better-comments
       bierner.docs-view
       bierner.markdown-preview-github-styles
@@ -11,8 +11,8 @@
       donjayamanne.githistory
       donjayamanne.python-environment-manager
       donjayamanne.python-extension-pack
-#     harryhopkinson.vs-code-runner
-#      kevinrose.vsc-python-indent
+      harryhopkinson.vs-code-runner
+      kevinrose.vsc-python-indent
       ktnrg45.vscode-cython
       mechatroner.rainbow-csv
       ms-python.black-formatter
