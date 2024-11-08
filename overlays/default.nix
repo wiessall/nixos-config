@@ -15,7 +15,9 @@
           # example = prev.example.overrideAttrs (oldAttrs: rec {
           # ...
           # });
-	  plasma6 = unstable.plasma6;
+	  plasma6 = prev.plasma6.overrideAttrs (_: {
+	    inherit (unstable) plasma6;
+	  });
         })
       ];
     };
