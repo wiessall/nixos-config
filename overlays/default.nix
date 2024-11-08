@@ -15,7 +15,7 @@
           # example = prev.example.overrideAttrs (oldAttrs: rec {
           # ...
           # });
-	plasma6 = unstable.plasma6;
+	plasma6 = pkgs.unstable.plasma6;
         })
       ];
     };
