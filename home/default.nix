@@ -33,6 +33,10 @@
 
   nixpkgs = {
 
+    overlays = [
+      outputs.overlays.unstable-packages
+
+    ];
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
