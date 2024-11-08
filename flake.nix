@@ -61,6 +61,8 @@
         pkgsInput = inputs.nixpkgs;
       };
     };
+    # Custom overlays
+    overlays = import ./overlays { inherit inputs; };
   };
 }
 

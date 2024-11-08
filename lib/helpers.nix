@@ -30,6 +30,9 @@
       };
       modules = [
 	inputs.plasma-manager.homeManagerModules.plasma-manager
+#        inputs.overlays = [
+#                nix-vscode-extensions.overlays.default # Also have a look at https://github.com/nix-community/nix-vscode-extensions/issues/29
+#              ];
 	../home
       ];
     };

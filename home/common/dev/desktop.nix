@@ -1,8 +1,8 @@
-{ pkgs, ...}:
+{ inputs, pkgs, ...}:
 {
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions.vscode-marketplace; [
+    extensions = with inputs.vscode-extensions.extensions.x86_64-linux.vscode-marketplace ; [
       aaron-bond.better-comments
       bierner.docs-view
       bierner.markdown-preview-github-styles
