@@ -7,6 +7,7 @@
 #      autosuggestion.enable = true;
       syntaxHighlighting = {
         enable = true;
+        catpuccin.enable = true;
       };
       defaultKeymap = "vicmd";
       history = {
