@@ -4,7 +4,7 @@ _: {
 
     tmux = {
       enable = true;
-#      catppuccin.enable = true;
+      catppuccin.enable = true;
 
       aggressiveResize = true;
       baseIndex = 1;
