@@ -61,13 +61,6 @@
         pkgsInput = inputs.nixpkgs;
       };
     };
-    packages = libx.forAllSystems (
-      system:
-      let
-        pkgs = unstable.legacyPackages.${system};
-      in
-      import ./pkgs { inherit pkgs; }
-    );
     # Custom overlays
     overlays = import ./overlays { inherit inputs; };
 
