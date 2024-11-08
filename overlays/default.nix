@@ -11,6 +11,7 @@
       inherit (final) system;
       config.allowUnfree = true;
       overlays = [
+	inputs.nix-vscode-extensions.overlays.default # Also have a look at https://github.com/nix-community/nix-vscode-extensions/issues/29
         (_final: prev: {
           # example = prev.example.overrideAttrs (oldAttrs: rec {
           # ...
@@ -19,8 +20,6 @@
 #          plasma-desktop = inputs.unstable.legacyPackages."${prev.system}".plasma-desktop;
 #          plasma-workspace = inputs.unstable.legacyPackages."${prev.system}".plasma-workspace;
 #          plasma-framework = inputs.unstable.legacyPackages."${prev.system}".plasma-framework;
-                nix-vscode-extensions.overlays.default # Also have a look at https://github.com/nix-community/nix-vscode-extensions/issues/29
-
         })
       ];
     };

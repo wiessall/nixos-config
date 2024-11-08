@@ -2,6 +2,7 @@
 {
   programs.vscode = {
     enable = true;
+    package = pkgs.vscodium;
     extensions = with pkgs.vscode-marketplace ; [
       aaron-bond.better-comments
       bierner.docs-view
@@ -28,10 +29,9 @@
       ms-toolsai.jupyter-renderers
       ms-toolsai.vscode-jupyter-cell-tags
       ms-toolsai.vscode-jupyter-slideshow
-      ms-vscode-remote.remote-server
-      ms-vscode-remote.remote-explorer
+      ms-vscode-remote.vscode-remote-extensionpack
       njpwerner.autodocstring
-      rdebgger.r-debugger
+      rdebugger.r-debugger
       reditorsupport.r
       snakemake.snakemake-lang
       tamasfe.even-better-toml

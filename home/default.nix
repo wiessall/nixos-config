@@ -35,6 +35,7 @@
 
     overlays = [
       outputs.overlays.unstable-packages
+      inputs.nix-vscode-extensions.overlays.default
 
     ];
     config = {
