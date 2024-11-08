@@ -83,6 +83,7 @@
 
   home.packages = with pkgs; [
 #    bitwarden-desktop
+    catppuccin-gtk
     gimp
     inkscape
     kdePackages.qtstyleplugin-kvantum
