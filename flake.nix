@@ -2,7 +2,7 @@
   description = "Modular NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
@@ -14,7 +14,7 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "unstable";
 
-    plasma-manager.url = "github:nix-community/plasma-manager";
+    plasma-manager.url = "github:nix-community/plasma-manager/trunk";
     plasma-manager.inputs.nixpkgs.follows = "unstable";
     plasma-manager.inputs.home-manager.follows = "home-manager";
 
@@ -61,8 +61,24 @@
         pkgsInput = inputs.nixpkgs;
       };
     };
+    packages = libx.forAllSystems (
+      system:
+      let
+        pkgs = unstable.legacyPackages.${system};
+      in
+      import ./pkgs { inherit pkgs; }
+    );
     # Custom overlays
     overlays = import ./overlays { inherit inputs; };
+
+    # Devshell for bootstrapping
+    devShells = libx.forAllSystems (
+      system:
+      let
+        pkgs = unstable.legacyPackages.${system};
+      in
+      import ./shell.nix { inherit pkgs; }
+    );
   };
 }
 
