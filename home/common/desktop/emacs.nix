@@ -9,7 +9,7 @@
   home.file = {
     ".emacs.d" = {
       source = builtins.fetchGit{
-        url = "https://github.com/syl20br/spacemacs";
+        url = "https://github.com/syl20bnr/spacemacs";
 	ref = "develop";
       };
     };
