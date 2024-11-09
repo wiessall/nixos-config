@@ -6,6 +6,7 @@
     ../dev
 
     ./alacritty.nix
+    ./emacs.nix
   ];
 
   programs = {
