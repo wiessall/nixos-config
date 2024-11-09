@@ -1,4 +1,10 @@
 { pkgs, inputs, desktop, config, ... }:
+let
+  spacemacsRepo = builtins.fetchGit{
+      url = "https://github.com/syl20bnr/spacemacs";
+      ref = "develop";
+    };
+in
 {
   programs = {
     emacs = {
@@ -6,13 +12,6 @@
       package = pkgs.emacs30-pgtk;
          };
     };
-  let
-    spacemacsRepo = builtins.fetchGit{
-        url = "https://github.com/syl20bnr/spacemacs";
-	ref = "develop";
-      };
-  in
-  {
   home = {
     activation.spacemacsPermissions = lib.hm.dag.entryAfter ["writeBoundary"] ''
     chmod -R U+rwX,g+rX,o+rX ${spacemacsRepo}
@@ -33,5 +32,4 @@
 #    };
     };
   };
- }
 }
