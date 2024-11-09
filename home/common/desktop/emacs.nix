@@ -13,12 +13,12 @@
 	ref = "develop";
       };
     };
-    ".spacemacs" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/tristan/.config/Emacs/spacemacs";
-    };
-    ".spacemacs.env" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/tristan/.config/Emacs/spacemacs.env";
-    };
+#    ".spacemacs" = {
+#      source = config.lib.file.mkOutOfStoreSymlink "/home/tristan/.config/Emacs/spacemacs";
+#    };
+#    ".spacemacs.env" = {
+#      source = config.lib.file.mkOutOfStoreSymlink "/home/tristan/.config/Emacs/spacemacs.env";
+#    };
 #    "Personal-Layers" = {
 #      target = ".config/emacs/private";
 #      source = ./Personal-Layers;
