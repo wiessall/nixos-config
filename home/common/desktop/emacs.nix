@@ -11,14 +11,14 @@ in
       enable = true;
       package = pkgs.emacs30-pgtk;
          };
-    };
+  };
   home = {
     activation.spacemacsPermissions = lib.hm.dag.entryAfter ["writeBoundary"] ''
     chmod -R U+rwX,g+rX,o+rX ${spacemacsRepo}
     '';
   file = {
     ".emacs.d" = {
-      source =     };
+      source = "${spacemacsRepo}";
 #    ".spacemacs" = {
 #      source = config.lib.file.mkOutOfStoreSymlink "/home/tristan/.config/Emacs/spacemacs";
 #    };
