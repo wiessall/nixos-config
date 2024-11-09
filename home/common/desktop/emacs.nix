@@ -19,6 +19,8 @@ in
   file = {
     ".emacs.d" = {
       source = "${spacemacsRepo}";
+
+    };
 #    ".spacemacs" = {
 #      source = config.lib.file.mkOutOfStoreSymlink "/home/tristan/.config/Emacs/spacemacs";
 #    };
@@ -30,6 +32,6 @@ in
 #      source = ./Personal-Layers;
 #      recursive = true;
 #    };
-    };
   };
+};
 }
