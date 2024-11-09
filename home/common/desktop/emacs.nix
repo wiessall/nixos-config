@@ -6,13 +6,20 @@
       package = pkgs.emacs30-pgtk;
          };
     };
-  home.file = {
-    ".emacs.d" = {
-      source = builtins.fetchGit{
+  let
+    spacemacsRepo = builtins.fetchGit{
         url = "https://github.com/syl20bnr/spacemacs";
 	ref = "develop";
       };
-    };
+  in
+  {
+  home = {
+    activation.spacemacsPermissions = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    chmod -R U+rwX,g+rX,o+rX ${spacemacsRepo}
+    '';
+  file = {
+    ".emacs.d" = {
+      source =     };
 #    ".spacemacs" = {
 #      source = config.lib.file.mkOutOfStoreSymlink "/home/tristan/.config/Emacs/spacemacs";
 #    };
@@ -24,5 +31,7 @@
 #      source = ./Personal-Layers;
 #      recursive = true;
 #    };
+    };
   };
+ }
 }
