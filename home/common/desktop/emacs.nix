@@ -1,4 +1,4 @@
-{ pkgs, inputs, desktop, ... }:
+{ pkgs, inputs, desktop, config, ... }:
 {
   programs = {
     emacs = {
@@ -7,16 +7,22 @@
          };
     };
   home.file = {
+    ".emacs.d" = {
+      source = builtins.fetchGit{
+        url = "https://github.com/syl20br/spacemacs";
+	ref = "develop";
+      };
+    };
     ".spacemacs" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tristan/.config/Emacs/spacemacs";
     };
     ".spacemacs.env" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/tristan/.config/Emacs/spacemacs.env";
     };
-    "Personal-Layers" = {
-      target = ".config/emacs/private";
-      source = ./Personal-Layers;
-      recursive = true;
-    };
+#    "Personal-Layers" = {
+#      target = ".config/emacs/private";
+#      source = ./Personal-Layers;
+#      recursive = true;
+#    };
   };
 }
