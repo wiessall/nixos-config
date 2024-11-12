@@ -1,4 +1,4 @@
-{ pkgs, inputs, desktop, config, ... }:
+{ pkgs, inputs, desktop, config, lib, ... }:
 let
   spacemacsRepo = builtins.fetchGit{
       url = "https://github.com/syl20bnr/spacemacs";
