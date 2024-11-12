@@ -1,4 +1,4 @@
-{ pkgs, self, ...}:
+{ pkgs, inputs, self, ...}:
 {
     firefox = {
       enable = true;
