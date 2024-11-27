@@ -1,4 +1,4 @@
-{ pkgs, inputs, self, ...}:
+{ pkgs, inputs, lib, self, ...}:
 {
   programs = {
     firefox = {
@@ -72,4 +72,5 @@
        };
     };
 };
+home.file.".mozilla/firefox/myprofile/search.json.mozlz4".enable = lib.mkDefault false;
 }

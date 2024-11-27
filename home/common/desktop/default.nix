@@ -17,8 +17,8 @@
   };
 
   home.packages = with pkgs; [
-#    bitwarden-desktop
     age
+    bitwarden-desktop
     catppuccin-gtk
     devenv
     gimp
@@ -30,6 +30,7 @@
     pamixer
     pavucontrol
     signal-desktop
+    sops
     spotify
     thunderbird
     vlc
