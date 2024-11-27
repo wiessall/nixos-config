@@ -18,6 +18,7 @@
 
   home.packages = with pkgs; [
 #    bitwarden-desktop
+    age
     catppuccin-gtk
     devenv
     gimp

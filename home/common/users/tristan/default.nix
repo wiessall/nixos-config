@@ -1,1 +1,7 @@
-{}
+{
+  home.file.".config/sops/age/keys.txt" = {
+    source = .config/sops/age/keys.txt;
+    permissions = "0600";
+  }
+
+}
