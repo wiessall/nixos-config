@@ -1,6 +1,6 @@
 keys:
   - &user_tristan age1tnhdfsww8jlkh3j2f8pxuy5w9rwc5vaths7xmjvfzacp8ht0eers2vzvm9 
-  - &host_vm age1fhsrnck628qmanjg8d69sz5td56rw7t5m3hs5gl5cnepdln5sa6qf6t6lv
+  - &host_vm age1kvlttdzseuftsfta29hq58q3s0mejax5mvaa97cees67ma5lj4aq75gfer
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:

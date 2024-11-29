@@ -19,10 +19,13 @@ inputs,
       keyFile = "/var/lib/sops-nix/keys.txt";
       generateKey = true;
     };
+    secrets."connections/my-server/hostname" = {};
 
     secrets = {
-      example-key = {};
-      "myservice/my_subdir/my_secret" = {};
+      connections = {
+#        path = "/run/secrets/example.yaml";
+	sopsFile = ../../../secrets/example.yaml;
+      };
     };
   };
 }

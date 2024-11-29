@@ -24,6 +24,9 @@
         tree = "eza --tree";
         cat = "bat";
      };
+     initExtra = ''
+       bindkey '^R' history-incremental-search-backward
+       '';
 
 
     };

@@ -8,6 +8,7 @@
     ./firefox.nix
     ./alacritty.nix
     ./emacs.nix
+    ./flathub.nix
   ];
 
   programs = {
@@ -22,6 +23,7 @@
     catppuccin-gtk
     devenv
     gimp
+    goldwarden
     inkscape
     kdePackages.qtstyleplugin-kvantum
     libreoffice-qt-fresh
