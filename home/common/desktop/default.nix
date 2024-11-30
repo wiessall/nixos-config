@@ -8,7 +8,6 @@
     ./firefox.nix
     ./alacritty.nix
     ./emacs.nix
-    ./flathub.nix
   ];
 
   programs = {

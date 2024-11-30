@@ -12,6 +12,7 @@ in
     (./. + "/${desktop}.nix")
 #    ../hardware/yubikey.nix
     ../services/pipewire.nix
+    ../services/flatpaks.nix
 #    ../virt
   ];
 
@@ -29,6 +30,11 @@ in
 
   # Enable location services
   location.provider = "geoclue2";
+
+  networking.networkmanager = {
+    enable = true;
+    wifi.powersave = true;
+  };
 
 #  programs = {
 #    _1password-gui = {

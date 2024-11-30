@@ -59,6 +59,7 @@
       modules = [
 	inputs.lanzaboote.nixosModules.lanzaboote
 	inputs.sops-nix.nixosModules.sops
+	inputs.flatpaks.nixosModules.declarative-flatpak
         ../host
       ];
     };

@@ -34,6 +34,9 @@
 
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "unstable";
+
+    flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
+    flatpaks.inputs.nixpkgs.follows = "unstable";
   };
 
   outputs = { self, nixpkgs, unstable, ... }@inputs:

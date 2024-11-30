@@ -3,6 +3,11 @@
 {
   imports = [ "${inputs.plasma-manager}/modules" ];
 
+
+  home.packages = with pkgs; [
+    plasma-nm
+  ];
+
   programs.plasma = {
     enable = true;
 
