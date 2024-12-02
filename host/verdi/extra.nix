@@ -9,11 +9,11 @@
       "-L"
     ];
     dates = "02:00";
-    ramdomizedDelaySec = "45min";
+    randomizedDelaySec = "45min";
   };
   services = {
     tlp = {
-      enable = true;
+      enable = false;
       settings = {
         START_CHARGE_BAT0=40;
 	STOP_CHARGE_BAT0=80;
