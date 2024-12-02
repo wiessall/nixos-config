@@ -48,7 +48,7 @@
   let
     inherit (self) outputs;
     stateVersion = "24.05";
-    username = "tristan";
+    username = "${config.arguments.username}";
     libx = import ./lib {
       inherit self inputs outputs stateVersion username;
     };
