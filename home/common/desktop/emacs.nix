@@ -14,7 +14,7 @@ in
   };
   home = {
     activation.spacemacsPermissions = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    chmod -R U+rwX,g+rX,o+rX ${spacemacsRepo}
+    chmod -R 755 ${spacemacsRepo}
     '';
   file = {
     ".emacs.d" = {

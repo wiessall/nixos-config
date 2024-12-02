@@ -11,16 +11,16 @@
   programs.plasma = {
     enable = true;
 
-#    overrideConfig = true;
+    overrideConfig = true;
 
     #
     # Some high-level settings:
     #
     workspace = {
       clickItemTo = "select";
-      lookAndFeel = "org.kde.otto.desktop";
-#      cursor.theme = "Bibata-Modern-Ice";
-#      iconTheme = "McMojave-circle-dark";
+      lookAndFeel = "com.github.vinceliuice.WhiteSur-light";
+      cursor.theme = "WhiteSur-cursors";
+      iconTheme = "WhiteSur-light";
       windowDecorations.library = "Catppuccin";
       windowDecorations.theme = "__aurorae__svg__CatppuccinMocha-Modern";
       wallpaper = ./rolling_hills.jpg;
@@ -43,6 +43,8 @@
         widgets = [
           "org.kde.plasma.kickoff"
           "org.kde.plasma.icontasks"
+          "org.kde.plasma.settings"
+          "org.kde.plasma.discover"
                  ];
       }
       # Global menu at the top

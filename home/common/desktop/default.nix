@@ -7,7 +7,7 @@
 
     ./firefox.nix
     ./alacritty.nix
-    ./emacs.nix
+#    ./emacs.nix
   ];
 
   programs = {
