@@ -43,7 +43,6 @@ in
               content = {
                 type = "filesystem";
                 format = "vfat";
-                existing = true; # Prevent overwriting
                 mountpoint = "/boot"; # Mount it for NixOS
               };
             };
