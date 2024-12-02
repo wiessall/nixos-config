@@ -6,7 +6,7 @@ inputs,
 let
   secretspath = builtins.toString inputs.nix-secrets;
 in
-{
+builtins.trace "Evaluated secretspath: ${secretspath}" {
   imports = [ inputs.sops-nix.nixosModules.sops ];
 
   sops = {
@@ -15,18 +15,15 @@ in
 
     age = {
       # automatically import host ssh key
-      sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519.key" ];
-      # Keys used at the top of your .sops.yaml file
-      # could be the inital keys set up when followin
-      # the sops-nix README
-      keyFile = "/var/lib/sops-nix/keys.txt";
+      sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
+      keyFile = "/var/lib/sops-nix/key.txt";
       generateKey = true;
     };
 
     secrets = {
       tristan_passwd = {
 #        path = "/run/secrets/example.yaml";
-	neededForUsers = true;
+	neededForUsers = false;
       };
     };
   };

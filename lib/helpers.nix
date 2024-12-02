@@ -31,7 +31,6 @@
       modules = [
 	inputs.plasma-manager.homeManagerModules.plasma-manager
 	inputs.catppuccin.homeManagerModules.catppuccin
-#              ];
 	../home
       ];
     };
