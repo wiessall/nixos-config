@@ -286,6 +286,24 @@
         "type": "github"
       }
     },
+    "nix-secrets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732960929,
+        "narHash": "sha256-dhnxKxgN+VRkJ51n8sVbmS2ZwW+TTljHo5tgfvyvyEM=",
+        "ref": "main",
+        "rev": "a73888d0ad7c5bbaa093cc9469ad5a05cfd9a545",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/wiessall/nixos-secrets"
+      },
+      "original": {
+        "ref": "main",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/wiessall/nixos-secrets"
+      }
+    },
     "nix-vscode-extensions": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -416,6 +434,7 @@
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "libations": "libations",
+        "nix-secrets": "nix-secrets",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",

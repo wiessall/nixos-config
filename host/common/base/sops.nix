@@ -7,7 +7,7 @@ let
   secretspath = builtins.toString inputs.nix-secrets;
 in
 {
-#  imports = [ inputs.sops-nix.nixosModules.sops ];
+  imports = [ inputs.sops-nix.nixosModules.sops ];
 
   sops = {
     defaultSopsFile = "${secretspath}/secrets.yaml";
