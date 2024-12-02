@@ -32,7 +32,7 @@
     spotify
     thunderbird
     vlc
-    wl-copy
+    wl-clipboard
     xdg-utils
     xorg.xlsclients
     zoom

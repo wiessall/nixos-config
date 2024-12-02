@@ -1,7 +1,7 @@
 {
   lib,
   disks ? [
-    "/dev/sda"
+    "/dev/nvme0n1"
   ],
   ...
 }:
@@ -27,67 +27,70 @@ in
     '';
   };
 
-
   disko.devices = {
     disk = {
       sda = {
         device = builtins.elemAt disks 0;
-	type = "disk";
-	content = {
-	  type = "gpt";
-	  partitions = {
-	    ESP = {
-	      size = "512M";
-	      type = "EF00";
-	      content = {
-	        type = "filesystem";
-		format = "vfat";
-		mountpoint = "/boot";
-	      };
-	    };
-	    # Luks encrypted data partition/subvolumes
-	    luks = {
-	      size = "100%";
-	      content = {
-	        type = "luks";
-		name = "${cryptroot}";
+        type = "disk";
+        content = {
+          type = "gpt";
+          partitions = {
+            # Explicitly reference the existing Windows EFI System Partition
+            ESP = {
+              start = "0"; # Start sector of the existing ESP
+              size = "512M";
+              type = "EF00"; # EFI System Partition
+              content = {
+                type = "filesystem";
+                format = "vfat";
+                existing = true; # Prevent overwriting
+                mountpoint = "/boot"; # Mount it for NixOS
+              };
+            };
+            # Add the LUKS-encrypted data partition for NixOS
+            luks = {
+              size = "100%"; # Use the remaining space for NixOS
+              content = {
+                type = "luks";
+                name = "${cryptroot}";
 
-		settings = {
-		  allowDiscards = true;
-		};
+                settings = {
+                  allowDiscards = true;
+                };
 
-		content = {
-		  type = "btrfs";
-		  # Override existing partition
-		  extraArgs = [ "-f" ];
-		  subvolumes = {
-		    "@" = {
-		      mountpoint = "/";
-		      mountOptions = defaultBtrfsOpts;
-		    };
-		    "@nix" = {
-		      mountpoint = "/nix";
-		      mountOptions = defaultBtrfsOpts;
-		    };
-		    "@home" = {
-		      mountpoint = "/home";
-		      mountOptions = defaultBtrfsOpts;
-		    };
-		    "@var" = {
-		      mountpoint = "/var";
-		      mountOptions = defaultBtrfsOpts;
-		    };
-		    "@snapshots" = {
-		      mountpoint = "/.snapshots";
-		      mountOptions = defaultBtrfsOpts;
-		    };
-		  };
-		};
-       	      };
-       	    };
+                content = {
+                  type = "btrfs";
+                  # Override existing partition if necessary (optional)
+                  extraArgs = [ "-f" ];
+                  subvolumes = {
+                    "@" = {
+                      mountpoint = "/";
+                      mountOptions = defaultBtrfsOpts;
+                    };
+                    "@nix" = {
+                      mountpoint = "/nix";
+                      mountOptions = defaultBtrfsOpts;
+                    };
+                    "@home" = {
+                      mountpoint = "/home";
+                      mountOptions = defaultBtrfsOpts;
+                    };
+                    "@var" = {
+                      mountpoint = "/var";
+                      mountOptions = defaultBtrfsOpts;
+                    };
+                    "@snapshots" = {
+                      mountpoint = "/.snapshots";
+                      mountOptions = defaultBtrfsOpts;
+                    };
+                  };
+                };
+              };
+            };
           };
         };
       };
     };
   };
 }
+
