@@ -2,12 +2,9 @@
 {
   imports = [
     (./. + "/${desktop}")
-
-    ../dev
-
+    (./users + "/${user}")
     ./firefox.nix
     ./alacritty.nix
-#    ./emacs.nix
   ];
 
   programs = {
