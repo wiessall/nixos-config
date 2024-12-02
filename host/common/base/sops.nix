@@ -3,11 +3,14 @@ pkgs,
 inputs,
 ...
 }:
+let
+  secretspath = builtins.toString inputs.nix-secrets;
+in
 {
 #  imports = [ inputs.sops-nix.nixosModules.sops ];
 
   sops = {
-    defaultSopsFile = ../../../secrets/example.yaml;
+    defaultSopsFile = "${secretspath}/secrets.yaml";
     validateSopsFiles = false;
 
     age = {
@@ -19,12 +22,11 @@ inputs,
       keyFile = "/var/lib/sops-nix/keys.txt";
       generateKey = true;
     };
-    secrets."connections/my-server/hostname" = {};
 
     secrets = {
-      connections = {
+      tristan_passwd = {
 #        path = "/run/secrets/example.yaml";
-	sopsFile = ../../../secrets/example.yaml;
+	neededForUsers = true;
       };
     };
   };

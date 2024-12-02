@@ -1,11 +1,11 @@
-{ pkgs, config, ... }:
+{ pkgs, inputs, config, ... }:
 let
   ifExists = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
   users.users.tristan = {
     isNormalUser = true;
-    hashedPassword = "$6$/XsnbKU4Era85r6h$mnQe6LQ/LHcCxmbvyXzPv9COONNiBvARl8KvcvzAk0V5jrPHvtrmR2.IthTTT3IHOzsztlg8ytTL3PiUJfmYD.";
+    hashedPasswordFile = config.sops.secrets.tristan_passwd.path;
     shell = pkgs.zsh;
     extraGroups =
       [

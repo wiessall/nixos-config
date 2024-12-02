@@ -15,6 +15,7 @@
     (./. + "/${hostname}/hardware.nix")
 
     ./common/base
+    ./common/users
     ./common/users/${username}
   ]
   # Include extra if exists for specified host

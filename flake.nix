@@ -37,6 +37,11 @@
 
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
     flatpaks.inputs.nixpkgs.follows = "unstable";
+
+    nix-secrets = {
+      url = "git+ssh://git@github.com/wiessall/nixos-secrets?ref=main&shallow=1";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, unstable, ... }@inputs:
@@ -44,20 +49,30 @@
     inherit (self) outputs;
     stateVersion = "24.05";
     username = "tristan";
-
     libx = import ./lib {
       inherit self inputs outputs stateVersion username;
     };
   in {
     homeConfigurations = {
+      "${username}@verdi" = libx.mkHome {
+        hostname = "verdi";
+	desktop = "plasma";
+	system = "x86_64-linux";
+        user = username;
+      };
       "${username}@vm" = libx.mkHome {
         hostname = "vm";
 	desktop = "plasma";
 	system = "x86_64-linux";
         user = username;
-      };
+      };    
     };
     nixosConfigurations = {
+      verdi = libx.mkHost {
+        hostname = "verdi";
+        desktop = "plasma";
+        pkgsInput = inputs.nixpkgs;
+      };
       vm = libx.mkHost {
         hostname = "vm";
         desktop = "plasma";
