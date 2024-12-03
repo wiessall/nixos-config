@@ -79,6 +79,15 @@
         pkgsInput = inputs.nixpkgs;
       };
     };
+        # Custom packages; acessible via 'nix build', 'nix shell', etc
+    packages = libx.forAllSystems (
+      system:
+        let
+          pkgs = unstable.legacyPackages.${system};
+        in
+          import ./pkgs { inherit pkgs; }
+    );
+
     # Custom overlays
     overlays = import ./overlays { inherit inputs; };
 

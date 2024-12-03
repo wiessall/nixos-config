@@ -2,7 +2,7 @@
 {
   imports = [
     (./. + "/${desktop}")
-    (./users + "/${username}")
+    (../users + "/${username}")
     ./firefox.nix
     ./alacritty.nix
   ];

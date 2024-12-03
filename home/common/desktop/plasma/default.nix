@@ -43,8 +43,8 @@
         widgets = [
           "org.kde.plasma.kickoff"
           "org.kde.plasma.icontasks"
-          "org.kde.plasma.settings"
-          "org.kde.plasma.discover"
+          "org.kde.plasma.systemsettings"
+          "org.kde.discover"
                  ];
       }
       # Global menu at the top
@@ -132,7 +132,7 @@
         "Walk Through Windows of Current Application" = "Ctrl+Tab";
         "Walk Through Windows of Current Application (Reverse)" = "Shift+Ctrl+Tab";
         "Window Close" = "Meta+W";
-        "Window Fullscreen" = "Meta+Up";
+        "Window Maximize" = "Meta+Up";
         "Window Minimize" = "Meta+Down";
         "Window One Desktop Down" = "Meta+Ctrl+Shift+Down";
         "Window One Desktop Up" = "Meta+Ctrl+Shift+Up";
