@@ -1,6 +1,5 @@
 { pkgs, ... }: 
-{
-  mac-theme = pkgs.stdenv.mkDerivation {
+pkgs.stdenv.mkDerivation {
     pname = "mac-theme";
     version = "latest";
     src = pkgs.fetchgit {
@@ -12,5 +11,4 @@
       mkdir -p $out/share/plasma
       cp -aR * $out/share/plasma
     '';
-  };
 }

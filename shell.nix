@@ -1,5 +1,6 @@
 # Shell for bootstrapping flake-enabled nix and other tooling
 {
+  checks,
   pkgs ?
     # If pkgs is not defined, instanciate nixpkgs from locked commit
     let
@@ -10,7 +11,6 @@
       };
     in
     import nixpkgs { overlays = [ ]; },
-  checks,
   ...
 }:
 {
