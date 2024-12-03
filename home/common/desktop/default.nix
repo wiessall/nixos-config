@@ -1,8 +1,8 @@
-{ pkgs, inputs, desktop, ... }:
+{ pkgs, inputs, desktop, username, ... }:
 {
   imports = [
     (./. + "/${desktop}")
-    (./users + "/${user}")
+    (./users + "/${username}")
     ./firefox.nix
     ./alacritty.nix
   ];

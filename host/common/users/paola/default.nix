@@ -3,7 +3,7 @@ let
   ifExists = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
-  users.users.tristan = {
+  users.users.paola = {
     isNormalUser = true;
     initialHashedPassword = "$y$j9T$Ng15Ehw.K0SjxxizWiJ96.$PdBcn06K/mruQxJKLN0KhNTxBLM5zefUNWsjSRmm7YB";
 #    hashedPasswordFile = config.sops.secrets.paola_passwd.path;
