@@ -16,6 +16,13 @@
       pkiBundle = "/etc/secureboot";
     };
 
+   fileSystems."/boot" =
+      { device = "/dev/disk/by-uuid/0D6B-888D";
+        fsType = "vfat";
+        options = [ "fmask=0077" "dmask=0077" ];
+      };
+
+
   };
 }
 
