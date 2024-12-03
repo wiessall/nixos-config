@@ -18,9 +18,9 @@
     #
     workspace = {
       clickItemTo = "select";
-      lookAndFeel = "com.github.vinceliuice.WhiteSur-light";
-      cursor.theme = "WhiteSur-cursors";
-      iconTheme = "WhiteSur-light";
+      lookAndFeel = pkgs.mac-theme;
+#      cursor.theme = "WhiteSur-cursors";
+#      iconTheme = "WhiteSur-light";
       windowDecorations.library = "Catppuccin";
       windowDecorations.theme = "__aurorae__svg__CatppuccinMocha-Modern";
       wallpaper = ./rolling_hills.jpg;

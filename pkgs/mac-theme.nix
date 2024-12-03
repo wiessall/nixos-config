@@ -1,6 +1,6 @@
 { pkgs, ... }: 
 {
-  moe-theme = pkgs.stdenv.mkDerivation {
+  mac-theme = pkgs.stdenv.mkDerivation {
     pname = "mac-theme";
     version = "latest";
     src = pkgs.fetchgit {
