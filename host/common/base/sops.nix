@@ -25,6 +25,10 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
 #        path = "/run/secrets/example.yaml";
 	neededForUsers = false;
       };
+      paloa_passwd = {
+#        path = "/run/secrets/example.yaml";
+	neededForUsers = true;
+      };
     };
   };
 }

@@ -6,19 +6,20 @@
 
   home.packages = with pkgs; [
     plasma-nm
+    mac-theme
   ];
 
   programs.plasma = {
     enable = true;
 
-    overrideConfig = true;
+    overrideConfig = false;
 
     #
     # Some high-level settings:
     #
     workspace = {
       clickItemTo = "select";
-      lookAndFeel = pkgs.mac-theme;
+#      lookAndFeel = "mac-theme";
 #      cursor.theme = "WhiteSur-cursors";
 #      iconTheme = "WhiteSur-light";
       windowDecorations.library = "Catppuccin";
