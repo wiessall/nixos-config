@@ -16,7 +16,7 @@
       system ? "x86_64-linux",
     }:
     inputs.home-manager.lib.homeManagerConfiguration {
-      pkgs = outputs.packages.${system};
+      pkgs = inputs.nixpkgs.legacyPackages.${system};
       extraSpecialArgs = {
         inherit
           self
