@@ -23,7 +23,6 @@
     inkscape
     kdePackages.qtstyleplugin-kvantum
     libreoffice-qt-fresh
-    mac-theme
     mattermost-desktop
     musicpod
     pamixer

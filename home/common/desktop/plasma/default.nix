@@ -6,7 +6,7 @@
 
   home.packages = with pkgs; [
     plasma-nm
-    mac-theme
+#    mac-theme
   ];
 
   programs.plasma = {
