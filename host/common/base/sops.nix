@@ -16,7 +16,7 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
     age = {
       # automatically import host ssh key
       sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
-      keyFile = "/var/lib/sops-nix/key.txt";
+      keyFile = "/home/tristan/.config/sops/age/keys.txt";
       generateKey = true;
     };
 
@@ -24,10 +24,6 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
       tristan_passwd = {
 #        path = "/run/secrets/example.yaml";
 	neededForUsers = false;
-      };
-      paloa_passwd = {
-#        path = "/run/secrets/example.yaml";
-	neededForUsers = true;
       };
     };
   };
