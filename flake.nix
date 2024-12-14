@@ -63,7 +63,7 @@
         user = username;
       };
       "${username}@vivaldi" = libx.mkHome {
-        hostname = "vm";
+        hostname = "vivaldi";
 	desktop = "plasma";
 	system = "x86_64-linux";
         user = username;
@@ -75,8 +75,8 @@
         desktop = "plasma";
         pkgsInput = inputs.nixpkgs;
       };
-      vm = libx.mkHost {
-        hostname = "vm";
+      vivaldi = libx.mkHost {
+        hostname = "vivaldi";
         desktop = "plasma";
         pkgsInput = inputs.nixpkgs;
       };
