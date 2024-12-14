@@ -70,11 +70,10 @@ in
 		      mountpoint = "/nix";
 		      mountOptions = defaultBtrfsOpts;
 		    };
-        "@persist" = {
+	            "@persist" = {
 		      mountpoint = "/persist";
 		      mountOptions = defaultBtrfsOpts;
-          neededForBoot = true;
-        }
+	            }
 		    "@home" = {
 		      mountpoint = "/home";
 		      mountOptions = defaultBtrfsOpts;

@@ -58,7 +58,7 @@
       modules = [
 	inputs.lanzaboote.nixosModules.lanzaboote
 	inputs.sops-nix.nixosModules.sops
-	inputs.impermanence.nixosModules.impermanence;
+	inputs.impermanence.nixosModules.impermanence
 	inputs.flatpaks.nixosModules.declarative-flatpak
         ../host
       ];
