@@ -9,11 +9,12 @@
       "/var/lib/systemd/coredump"
       "/etc/NetworkManager/system-connections"
       "/etc/secureboot"
+      "/etc/ssh"
       { directory = "/var/lib/colord"; user = "colord"; group = "colord"; mode = "u=rwx,g=rx,o="; }
     ];
     files = [
       "/etc/machine-id"
-      { file = "/var/keys/secret_file"; parentDirectory = { mode = "u=rwx,g=,o="; }; }
+#      { file = "/var/keys/secret_file"; parentDirectory = { mode = "u=rwx,g=,o="; }; }
     ];
     users.tristan = {
       directories = [
@@ -23,6 +24,7 @@
         "Documents"
         "Videos"
         "VirtualBox VMs"
+        "nix"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
         { directory = ".nixops"; mode = "0700"; }
