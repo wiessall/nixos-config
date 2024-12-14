@@ -62,7 +62,7 @@
 	system = "x86_64-linux";
         user = username;
       };
-      "${username}@vm" = libx.mkHome {
+      "${username}@vivaldi" = libx.mkHome {
         hostname = "vm";
 	desktop = "plasma";
 	system = "x86_64-linux";
