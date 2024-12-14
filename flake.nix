@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    impermanence.url = "github:nix-community/impermanence";
 
     catppuccin.url = "github:catppuccin/nix";
 
@@ -66,10 +67,21 @@
 	system = "x86_64-linux";
         user = username;
       };    
+      "${username}@vivaldi" = libx.mkHome {
+        hostname = "vivaldi";
+	desktop = "plasma";
+	system = "x86_64-linux";
+        user = username;
+      };
     };
     nixosConfigurations = {
       verdi = libx.mkHost {
         hostname = "verdi";
+        desktop = "plasma";
+        pkgsInput = inputs.nixpkgs;
+      };
+      vivaldi = libx.mkHost {
+        hostname = "vivaldi";
         desktop = "plasma";
         pkgsInput = inputs.nixpkgs;
       };
