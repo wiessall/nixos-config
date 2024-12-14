@@ -43,6 +43,7 @@ in
 	        type = "filesystem";
 		format = "vfat";
 		mountpoint = "/boot";
+    mountOptions = [ "defaults" ];
 	      };
 	    };
 	    # Luks encrypted data partition/subvolumes
@@ -69,16 +70,13 @@ in
 		      mountpoint = "/nix";
 		      mountOptions = defaultBtrfsOpts;
 		    };
+        "@persist" = {
+		      mountpoint = "/persist";
+		      mountOptions = defaultBtrfsOpts;
+          neededForBoot = true;
+        }
 		    "@home" = {
 		      mountpoint = "/home";
-		      mountOptions = defaultBtrfsOpts;
-		    };
-		    "@var" = {
-		      mountpoint = "/var";
-		      mountOptions = defaultBtrfsOpts;
-		    };
-		    "@snapshots" = {
-		      mountpoint = "/.snapshots";
 		      mountOptions = defaultBtrfsOpts;
 		    };
 		  };

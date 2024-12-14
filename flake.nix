@@ -5,6 +5,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    impermanence.url = "github:nix-community/impermanence";
+    impermanence.inputs.nixpkgs.follows = "unstable";
 
     catppuccin.url = "github:catppuccin/nix";
 
@@ -48,7 +50,7 @@
   let
     inherit (self) outputs;
     stateVersion = "24.05";
-    username = "paola";
+    username = "tristan";
     libx = import ./lib {
       inherit self inputs outputs stateVersion username;
     };
