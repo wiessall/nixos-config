@@ -73,7 +73,7 @@ in
 	            "@persist" = {
 		      mountpoint = "/persist";
 		      mountOptions = defaultBtrfsOpts;
-	            }
+	            };
 		    "@home" = {
 		      mountpoint = "/home";
 		      mountOptions = defaultBtrfsOpts;
