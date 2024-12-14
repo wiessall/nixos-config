@@ -1,13 +1,10 @@
-{ pkgs, inputs, desktop, ... }:
+{ pkgs, inputs, desktop, username, ... }:
 {
   imports = [
     (./. + "/${desktop}")
-
-    ../dev
-
+    (../users + "/${username}")
     ./firefox.nix
     ./alacritty.nix
-    ./emacs.nix
   ];
 
   programs = {
@@ -35,6 +32,7 @@
     spotify
     thunderbird
     vlc
+    wl-clipboard
     xdg-utils
     xorg.xlsclients
     zoom

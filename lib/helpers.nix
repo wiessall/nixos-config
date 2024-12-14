@@ -16,7 +16,7 @@
       system ? "x86_64-linux",
     }:
     inputs.home-manager.lib.homeManagerConfiguration {
-      pkgs = inputs.unstable.legacyPackages.${system};
+      pkgs = inputs.nixpkgs.legacyPackages.${system};
       extraSpecialArgs = {
         inherit
           self
@@ -31,7 +31,6 @@
       modules = [
 	inputs.plasma-manager.homeManagerModules.plasma-manager
 	inputs.catppuccin.homeManagerModules.catppuccin
-#              ];
 	../home
       ];
     };

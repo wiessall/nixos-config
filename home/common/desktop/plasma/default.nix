@@ -6,21 +6,22 @@
 
   home.packages = with pkgs; [
     plasma-nm
+#    mac-theme
   ];
 
   programs.plasma = {
     enable = true;
 
-#    overrideConfig = true;
+    overrideConfig = false;
 
     #
     # Some high-level settings:
     #
     workspace = {
       clickItemTo = "select";
-      lookAndFeel = "org.kde.otto.desktop";
-#      cursor.theme = "Bibata-Modern-Ice";
-#      iconTheme = "McMojave-circle-dark";
+#      lookAndFeel = "mac-theme";
+#      cursor.theme = "WhiteSur-cursors";
+#      iconTheme = "WhiteSur-light";
       windowDecorations.library = "Catppuccin";
       windowDecorations.theme = "__aurorae__svg__CatppuccinMocha-Modern";
       wallpaper = ./rolling_hills.jpg;
@@ -43,6 +44,8 @@
         widgets = [
           "org.kde.plasma.kickoff"
           "org.kde.plasma.icontasks"
+          "org.kde.plasma.systemsettings"
+          "org.kde.discover"
                  ];
       }
       # Global menu at the top
@@ -130,7 +133,7 @@
         "Walk Through Windows of Current Application" = "Ctrl+Tab";
         "Walk Through Windows of Current Application (Reverse)" = "Shift+Ctrl+Tab";
         "Window Close" = "Meta+W";
-        "Window Fullscreen" = "Meta+Up";
+        "Window Maximize" = "Meta+Up";
         "Window Minimize" = "Meta+Down";
         "Window One Desktop Down" = "Meta+Ctrl+Shift+Down";
         "Window One Desktop Up" = "Meta+Ctrl+Shift+Up";
@@ -220,7 +223,7 @@
 
       "kxkbrc"."Layout"."Options" = "caps:swapescape";
       "kxkbrc"."Layout"."ResetOldOptions" = true;
-      "plasma-localerc"."Formats"."LANG" = "en_US.UTF-8";
+      "plasma-localerc"."Formats"."LANG" = "it_IT.UTF-8";
       "spectaclerc"."ImageSave"."translatedScreenshotsFolder" = "Screenshots";
       "spectaclerc"."VideoSave"."translatedScreencastsFolder" = "Screencasts";
     };

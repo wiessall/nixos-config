@@ -38,17 +38,17 @@
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
     flatpaks.inputs.nixpkgs.follows = "unstable";
 
-#    nix-secrets = {
-#      url = "git+ssh://git@github.com/wiessall/nixos-secrets?ref=main&shallow=1";
-#      flake = false;
-#    };
+    nix-secrets = {
+      url = "git+ssh://git@github.com/wiessall/nixos-secrets?ref=main&shallow=1";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, unstable, ... }@inputs:
   let
     inherit (self) outputs;
     stateVersion = "24.05";
-    username = "tristan";
+    username = "paola";
     libx = import ./lib {
       inherit self inputs outputs stateVersion username;
     };
@@ -79,6 +79,15 @@
         pkgsInput = inputs.nixpkgs;
       };
     };
+        # Custom packages; acessible via 'nix build', 'nix shell', etc
+    packages = libx.forAllSystems (
+      system:
+        let
+          pkgs = unstable.legacyPackages.${system};
+        in
+          import ./pkgs { inherit pkgs; }
+    );
+
     # Custom overlays
     overlays = import ./overlays { inherit inputs; };
 
