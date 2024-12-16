@@ -2,7 +2,7 @@
   description = "Modular NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     impermanence.url = "github:nix-community/impermanence";
@@ -23,7 +23,7 @@
     lanzaboote.inputs.nixpkgs.follows = "unstable";
 
     sops-nix.url = "github:Mic92/sops-nix";
-    sops-nix.inputs.nixpkgs.follows = "unstable";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
     libations.url = "github:jnsgruk/libations";
     libations.inputs.nixpkgs.follows = "unstable";

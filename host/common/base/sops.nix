@@ -23,7 +23,7 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
     secrets = {
       tristan_passwd = {
 #        path = "/run/secrets/example.yaml";
-	neededForUsers = false;
+	neededForUsers = true;
       };
       paloa_passwd = {
 #        path = "/run/secrets/example.yaml";
