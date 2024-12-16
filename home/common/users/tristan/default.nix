@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   imports = [
-    ../../../dev
+#    ../../../dev
     ../../emacs.nix
 #    ./ssh-connections.nix
   ];
