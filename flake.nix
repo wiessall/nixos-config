@@ -13,7 +13,7 @@
     disko.inputs.nixpkgs.follows = "unstable";
 
     home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "unstable";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     plasma-manager.url = "github:nix-community/plasma-manager/trunk";
     plasma-manager.inputs.nixpkgs.follows = "unstable";
