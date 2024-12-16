@@ -2,7 +2,7 @@ _: {
   time.timeZone = "Europe/Rome";
 
   console.keyMap = "us";
-  services.xserver.xkb.layout = "it";
+  services.xserver.xkb.layout = "us, de";
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {

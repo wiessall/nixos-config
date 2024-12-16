@@ -30,7 +30,7 @@ in
 
   disko.devices = {
     disk = {
-      sda = {
+      main = {
         device = builtins.elemAt disks 0;
 	type = "disk";
 	content = {

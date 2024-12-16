@@ -3,7 +3,6 @@
     enable = true;  # NB: Defaults to true, not needed
     hideMounts = true;
     directories = [
-      "/boot"
       "/var/log"
       "/var/lib/bluetooth"
       "/var/lib/nixos"
