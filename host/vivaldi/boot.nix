@@ -9,10 +9,10 @@
     #enable secure boot
     bootspec.enable = true; 
     #disable systemd boot
-    loader.systemd-boot.enable = lib.mkForce true;
+    loader.systemd-boot.enable = lib.mkForce false;
 
     lanzaboote = {
-      enable = false;
+      enable = true;
       pkiBundle = "/etc/secureboot";
     };
 

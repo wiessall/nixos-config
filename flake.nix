@@ -39,10 +39,10 @@
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
     flatpaks.inputs.nixpkgs.follows = "unstable";
 
-#    nix-secrets = {
-#      url = "git+ssh://git@github.com/wiessall/nixos-secrets?ref=main&shallow=1";
-#      flake = false;
-#    };
+    nix-secrets = {
+      url = "git+ssh://git@github.com/wiessall/nixos-secrets?ref=main&shallow=1";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, unstable, ... }@inputs:
