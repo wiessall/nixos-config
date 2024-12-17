@@ -5,8 +5,8 @@ in
 {
   users.users.tristan = {
     isNormalUser = true;
-#    initialHashedPassword = "$y$j9T$Ng15Ehw.K0SjxxizWiJ96.$PdBcn06K/mruQxJKLN0KhNTxBLM5zefUNWsjSRmm7YB";
-    hashedPasswordFile = config.sops.secrets.tristan_passwd.path;
+    initialHashedPassword ="$y$j9T$4.6Yp5/XwW5h6OFwGI30k.$Q8gggKxdYB53ILcTWGpkuwh8gJwxo8hInYF7tlpi3C8";
+#    hashedPasswordFile = config.sops.secrets.tristan_passwd.path;
     shell = pkgs.zsh;
     extraGroups =
       [
