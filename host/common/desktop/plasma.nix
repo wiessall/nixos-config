@@ -12,8 +12,7 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "en";
-    variant = "US";
+    layout = "us";
   };
 
   # Enable CUPS to print documents.
