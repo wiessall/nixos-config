@@ -72,7 +72,6 @@ in
 		    };
 	            "@persistent" = {
 		      mountpoint = "/persistent";
-                      neededForBoot=true;
 		      mountOptions = defaultBtrfsOpts;
 	            };
 		  };
@@ -84,4 +83,5 @@ in
       };
     };
   };
+  fileSystems."/persistent".neededForBoot = true;
 }
