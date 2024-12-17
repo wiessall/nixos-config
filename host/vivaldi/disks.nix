@@ -30,7 +30,7 @@ in
 
   disko.devices = {
     disk = {
-      sda = {
+      main = {
         device = builtins.elemAt disks 0;
 	type = "disk";
 	content = {
@@ -70,14 +70,11 @@ in
 		      mountpoint = "/nix";
 		      mountOptions = defaultBtrfsOpts;
 		    };
-	            "@persist" = {
-		      mountpoint = "/persist";
+	            "@persistent" = {
+		      mountpoint = "/persistent";
+                      neededForBoot=true;
 		      mountOptions = defaultBtrfsOpts;
 	            };
-		    "@home" = {
-		      mountpoint = "/home";
-		      mountOptions = defaultBtrfsOpts;
-		    };
 		  };
 		};
        	      };

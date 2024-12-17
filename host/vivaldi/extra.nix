@@ -4,7 +4,7 @@
     hideMounts = true;
     directories = [
       "/var/log"
-#      "/var/lib/bluetooth"
+      "/var/lib/bluetooth"
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/etc/NetworkManager/system-connections"
@@ -14,6 +14,7 @@
     ];
     files = [
       "/etc/machine-id"
+      "/etc/data.keyfile"
 #      { file = "/var/keys/secret_file"; parentDirectory = { mode = "u=rwx,g=,o="; }; }
     ];
     users.tristan = {
@@ -25,6 +26,7 @@
         "Videos"
         "VirtualBox VMs"
         "nix"
+	".emacs.d"
         { directory = ".gnupg"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
         { directory = ".nixops"; mode = "0700"; }
@@ -32,7 +34,6 @@
         ".local/share/direnv"
       ];
       files = [
-        "/etc/data.keyfile"
       ];
     };
   };
