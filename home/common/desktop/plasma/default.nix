@@ -223,7 +223,7 @@
 
       "kxkbrc"."Layout"."Options" = "caps:swapescape";
       "kxkbrc"."Layout"."ResetOldOptions" = true;
-      "plasma-localerc"."Formats"."LANG" = "it_IT.UTF-8";
+      "plasma-localerc"."Formats"."LANG" = "en_US.UTF-8";
       "spectaclerc"."ImageSave"."translatedScreenshotsFolder" = "Screenshots";
       "spectaclerc"."VideoSave"."translatedScreencastsFolder" = "Screencasts";
     };
