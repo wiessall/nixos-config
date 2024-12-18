@@ -24,7 +24,7 @@
     ];
     after = [
       # LUKS/TPM process
-      "systemd-cryptsetup@enc.service"
+      "systemd-cryptsetup@cryptroot.service"
     ];
     before = [
       "sysroot.mount"
@@ -33,26 +33,46 @@
     serviceConfig.Type = "oneshot";
     script = ''
       mkdir /btrfs_tmp
-      mount /dev/mapper/main/ /btrfs_tmp
-      if [[ -e /btrfs_tmp/root ]]; then
+      if ! mountpoint /btrfs_mp; then
+        mount /dev/mapper/cryptroot /btrfs_tmp || {
+          echo "Failed to mount /dev/mapper/cryptroot" >&2
+          exit 1
+        }
+      fi
+
+      # Check if the root subvolume exists; create if it doesn't
+      if ! btrfs subvolume show /btrfs_tmp/root >/dev/null 2>&1; then
+          echo "Root subvolume does not exist; creating initial root subvolume."
+          btrfs subvolume create /btrfs_tmp/root || {
+              echo "Failed to create root subvolume" >&2
+              exit 1
+          }
+      fi
+
+      # Rotate and clean up old roots
+      if btrfs subvolume show /btrfs_tmp/root >/dev/null 2>&1; then
           mkdir -p /btrfs_tmp/old_roots
-          timestamp=$(date --date="@$(stat -c %Y /btrfs_tmp/root)" "+%Y-%m-%-d_%H:%M:%S")
-          mv /btrfs_tmp "/btrfs_tmp/old_roots/$timestamp"
+          timestamp=$(date "+%Y-%m-%d_%H:%M:%S")
+          mv /btrfs_tmp/root "/btrfs_tmp/old_roots/$timestamp"
       fi
 
       delete_subvolume_recursively() {
-          IFS=$'\n'
-          for i in $(btrfs subvolume list -o "$1" | cut -f 9- -d ' '); do
-              delete_subvolume_recursively "/btrfs_tmp/$i"
-          done
-          btrfs subvolume delete "$1"
+          local path="$1"
+          if [[ -d "$path" ]]; then
+          
+            IFS=$'\n'
+            for subvol in $(btrfs subvolume list -o "$path" | cut -f 9- -d ' '); do
+              delete_subvolume_recursively "/btrfs_tmp/$subvol"
+            done
+            btrfs subvolume delete "$path" || true
+      }
+      find /btrfs_tmp/old_roots/ -maxdepth 1 -mtime +30 -exec delete_subvolume_recursively {} \;
+      # Create a fresh root subvolume
+      btrfs subvolume create /btrfs_tmp/root || {
+          echo "Failed to create new root subvolume" >&2
+          exit 1
       }
 
-      for i in $(find /btrfs_tmp/old_roots/ -maxdepth 1 -mtime +30); do
-          delete_subvolume_recursively "$i"
-      done
-
-      btrfs subvolume create /btrfs_tmp/root
       umount /btrfs_tmp
     '';
     };
