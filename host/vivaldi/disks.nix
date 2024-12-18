@@ -23,7 +23,7 @@ in
 
   environment.etc = {
     "crypttab".text = ''
-      main /dev/disk/by-partlabel/data /etc/data.keyfile
+      cryptroot /dev/disk/by-partlabel/main /etc/data.keyfile
     '';
   };
 
