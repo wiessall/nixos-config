@@ -21,11 +21,11 @@ in
     preLVM = true;
   };
 
-  environment.etc = {
-    "crypttab".text = ''
-      cryptroot /dev/disk/by-partlabel/main /etc/data.keyfile
-    '';
-  };
+#  environment.etc = {
+#    "crypttab".text = ''
+#      cryptroot /dev/disk/by-partlabel/main /etc/data.keyfile
+#    '';
+#  };
 
 
   disko.devices = {

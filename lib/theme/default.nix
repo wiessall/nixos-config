@@ -57,8 +57,8 @@ rec {
       package = pkgs.inter;
     };
     monospace = {
-      name = "MesloLGSDZ Nerd Font Mono";
-      package = pkgs.nerdfonts.override { fonts = [ "Meslo" ]; };
+      name = "JetBrainsMono Nerd Font";
+      package = pkgs.nerd-fonts.jetbrains-mono; #.override { fonts = [ "Meslo" ]; };
     };
     emoji = {
       name = "Joypixels";

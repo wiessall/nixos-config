@@ -23,7 +23,13 @@
   # Include desktop config if a desktop is defined
   ++ lib.optional (builtins.isString desktop) ./common/desktop;
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    overlays = [];
+    config = {
+      allowUnfree = true;
+      joypixels.acceptLicense = true;
+    };
+  };
 
   nix = {
     settings = {

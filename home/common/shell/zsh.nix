@@ -20,7 +20,10 @@
         share = true;
       };
       shellAliases = {
-        ls = "eza -gl --git --color=automatic";
+        ls =
+	  ''
+            eza -gl --git --color=automatic --time-style="+%Y-%m-%d"
+	  '';
         tree = "eza --tree";
         cat = "bat";
      };

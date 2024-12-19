@@ -1,0 +1,11 @@
+* TODOS
+** Missing Packages
+  - git-lfs
+  - kontact (KDE calendar, etc)
+  - calculator
+** Setup
+  - sops-nix handling of user secrets
+  - micromamba \w vscode
+  - dev shell \w vscode
+  - impermanence \luks crypt
+  - better luks password

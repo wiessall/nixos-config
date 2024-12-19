@@ -5,6 +5,7 @@ in
 {
   imports = [
     ./bat.nix
+    ./git.nix
     ./starship.nix
     ./tmux.nix
     ./vim.nix
