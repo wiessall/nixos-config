@@ -10,9 +10,6 @@
     unstable = import inputs.unstable {
       inherit (final) system;
       config.allowUnfree = true;
-#      packageOverrides = _: {
-#         poetry2nix = poetry2nix.lib.mkPoetry2Nix { inherit pkgs; };
-#        };
       overlays = [
 	inputs.nix-vscode-extensions.overlays.default # Also have a look at https://github.com/nix-community/nix-vscode-extensions/issues/29
         (_final: prev: {

@@ -39,9 +39,6 @@
 
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
     flatpaks.inputs.nixpkgs.follows = "unstable";
-    poetry2nix = { url = "github:nix-community/poetry2nix/2024.5.939250";
-            inputs.nixpkgs.follows = "nixpkgs";
-    };
 
 #    nix-secrets = {
 #      url = "git+ssh://git@github.com/wiessall/nixos-secrets?ref=main&shallow=1";
