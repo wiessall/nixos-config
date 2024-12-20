@@ -1,10 +1,10 @@
 * TODOS
-** TODO Missing Packages [0/4]
+** TODO Missing Packages [0/5]
   - [ ] git-lfs
   - [ ] kontact (KDE calendar, etc)
   - [ ] calculator
   - [ ] openconnect-sso
-** TODO Setup [0/8]
+** TODO Setup [0/10]
   - [ ] openconnect-sso
     + [ ] add new ssh key to [[https://pwtools.embl.de/sshkey][EMBL pwtools]]
   - [ ] micromamba \w vscode
@@ -12,6 +12,8 @@
   - [ ] backup strategy
   - [ ] better luks password
   - [ ] sops-nix handling of user secrets
+  - [ ] power settings: charge limits
+  - [ ] nixfmt
   - [ ] dev shell \w vscode
   - [ ] impermanence \luks crypt
 * Overlays and Overrides
@@ -19,3 +21,7 @@
   - Solution: point flake input to fork repo; add overlay and build the config
   - How does adding the overlay really work?
   - How do I 'build' my config
+* FIx
+** 
+#+begin_src bash
+

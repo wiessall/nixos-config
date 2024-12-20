@@ -22,6 +22,7 @@
     goldwarden
     inkscape
     kdePackages.qtstyleplugin-kvantum
+    kontact
     libreoffice-qt-fresh
     mattermost-desktop
     musicpod
@@ -30,11 +31,13 @@
     signal-desktop
     sops
     spotify
+    texlive.combined.scheme-full
     thunderbird
     vlc
     wl-clipboard
     xdg-utils
     xorg.xlsclients
+    xournal
     zoom
     zotero
   ];
