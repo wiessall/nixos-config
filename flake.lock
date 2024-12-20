@@ -322,6 +322,7 @@
     "nix-github-actions": {
       "inputs": {
         "nixpkgs": [
+          "openconnect-sso",
           "poetry2nix",
           "nixpkgs"
         ]
@@ -410,6 +411,40 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1716361217,
+        "narHash": "sha256-mzZDr00WUiUXVm1ujBVv6A0qRd8okaITyUp4ezYRgc4=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "46397778ef1f73414b03ed553a3368f0e7e33c2f",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "openconnect-sso": {
+      "inputs": {
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": "nixpkgs_2",
+        "poetry2nix": "poetry2nix"
+      },
+      "locked": {
+        "lastModified": 1716831118,
+        "narHash": "sha256-38jjxX49fimjDnp88tdAGNjVuo/7kyouOOhsuFhRTSc=",
+        "owner": "jcszymansk",
+        "repo": "openconnect-sso",
+        "rev": "392b78e83d1ab5101920187cc4f02b4667aa8b4e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jcszymansk",
+        "repo": "openconnect-sso",
+        "type": "github"
+      }
+    },
     "plasma-manager": {
       "inputs": {
         "home-manager": [
@@ -436,9 +471,13 @@
     },
     "poetry2nix": {
       "inputs": {
-        "flake-utils": "flake-utils_3",
+        "flake-utils": [
+          "openconnect-sso",
+          "flake-utils"
+        ],
         "nix-github-actions": "nix-github-actions",
         "nixpkgs": [
+          "openconnect-sso",
           "nixpkgs"
         ],
         "systems": "systems_4",
@@ -499,8 +538,8 @@
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
+        "openconnect-sso": "openconnect-sso",
         "plasma-manager": "plasma-manager",
-        "poetry2nix": "poetry2nix",
         "sops-nix": "sops-nix",
         "unstable": "unstable",
         "vscode-server": "vscode-server"
@@ -624,16 +663,17 @@
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
+          "openconnect-sso",
           "poetry2nix",
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1714058656,
-        "narHash": "sha256-Qv4RBm4LKuO4fNOfx9wl40W2rBbv5u5m+whxRYUMiaA=",
+        "lastModified": 1715940852,
+        "narHash": "sha256-wJqHMg/K6X3JGAE9YLM0LsuKrKb4XiBeVaoeMNlReZg=",
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "rev": "c6aaf729f34a36c445618580a9f95a48f5e4e03f",
+        "rev": "2fba33a182602b9d49f0b2440513e5ee091d838b",
         "type": "github"
       },
       "original": {

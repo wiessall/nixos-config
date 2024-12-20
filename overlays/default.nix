@@ -13,6 +13,17 @@
       overlays = [
 	inputs.nix-vscode-extensions.overlays.default # Also have a look at https://github.com/nix-community/nix-vscode-extensions/issues/29
         (_final: prev: {
+	              openconnect-sso = prev.stdenv.mkDerivation rec {
+                pname = "openconnect";
+                version = "custom";
+                src = openconnect-sso;
+                buildInputs = [ prev.python3 prev.pyopenssl prev.pip ];
+                # Include any additional build instructions from the fork
+                installPhase = ''
+                  mkdir -p $out/bin
+                  cp ./openconnect-sso $out/bin/openconnect-sso
+                '';
+              };
           # example = prev.example.overrideAttrs (oldAttrs: rec {
           # ...
           # });

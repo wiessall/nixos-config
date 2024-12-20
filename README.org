@@ -14,3 +14,8 @@
   - [ ] sops-nix handling of user secrets
   - [ ] dev shell \w vscode
   - [ ] impermanence \luks crypt
+* Overlays and Overrides
+  - Use case: openconnect-sso package is broken, but there is a fork fixing this
+  - Solution: point flake input to fork repo; add overlay and build the config
+  - How does adding the overlay really work?
+  - How do I 'build' my config

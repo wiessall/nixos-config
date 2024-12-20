@@ -56,7 +56,7 @@
       };
     };
     packages = with pkgs; [
-      conda
+      mircomamba
     ];
   };
 }
