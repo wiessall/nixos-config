@@ -1,5 +1,7 @@
 {
   config,
+  inputs,
+  pkgs,
   desktop,
   hostname,
   lib,
@@ -28,6 +30,9 @@
     config = {
       allowUnfree = true;
       joypixels.acceptLicense = true;
+      packageOverrides = _: {
+        inputs.poetry2nix = inputs.poetry2nix.lib.mkPoetry2Nix { inherit pkgs; };
+      };
     };
   };
 
