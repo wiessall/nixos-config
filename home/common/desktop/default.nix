@@ -21,8 +21,14 @@
     gimp
     goldwarden
     inkscape
+    kdePackages.akonadi
+    kdePackages.akonadi-import-wizard
+    kdePackages.kdepim-runtime
+    kdePackages.kontact
+    kdePackages.libkdepim
+    kdePackages.pimcommon
+    kdePackages.pim-data-exporter
     kdePackages.qtstyleplugin-kvantum
-    kontact
     libreoffice-qt-fresh
     mattermost-desktop
     musicpod

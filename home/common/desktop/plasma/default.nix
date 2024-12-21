@@ -23,7 +23,7 @@
 #      cursor.theme = "WhiteSur-cursors";
 #      iconTheme = "WhiteSur-light";
       windowDecorations.library = "Catppuccin";
-      windowDecorations.theme = "__aurorae__svg__CatppuccinMocha-Modern";
+      windowDecorations.theme = "__aurorae__svg__CatppuccinLatte-Modern";
       wallpaper = ./rolling_hills.jpg;
     };
 

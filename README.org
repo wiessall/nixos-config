@@ -1,20 +1,25 @@
 * TODOS
-** TODO Missing Packages [0/5]
-  - [ ] git-lfs
-  - [ ] kontact (KDE calendar, etc)
+** TODO Missing Packages [3/4]
+  - [X] git-lfs
+  - [X] kontact (KDE calendar, etc)
   - [ ] calculator
-  - [ ] openconnect-sso
-** TODO Setup [0/10]
-  - [ ] openconnect-sso
-    + [ ] add new ssh key to [[https://pwtools.embl.de/sshkey][EMBL pwtools]]
-  - [ ] micromamba \w vscode
+  - [X] openconnect-sso
+** TODO Setup [5/13]
+  - [X] openconnect-sso
+    + [X] add new ssh key to [[https://pwtools.embl.de/sshkey][EMBL pwtools]]
+  - [X] micromamba \w vscode
   - [ ] ssh-config
-  - [ ] backup strategy
-  - [ ] better luks password
+  - [X] backup strategy
+    + for now manual mounting of drives + borg backup
+  - [X] better luks password
   - [ ] sops-nix handling of user secrets
   - [ ] power settings: charge limits
+    + [ ] generally battery drains quickly
+  - [ ] sync calendars
+  - [ ] light/dark switches of tool bars are inverted
+  - [ ] write style config package
   - [ ] nixfmt
-  - [ ] dev shell \w vscode
+  - [X] dev shell \w vscode
   - [ ] impermanence \luks crypt
 * Overlays and Overrides
   - Use case: openconnect-sso package is broken, but there is a fork fixing this
@@ -23,5 +28,4 @@
   - How do I 'build' my config
 * FIx
 ** 
-#+begin_src bash
 
