@@ -2,6 +2,7 @@
 {
   boot = {
 #    loader.systemd-boot.enable = true;
+    kernelPackages = pkgs.linuxPackages_latest;
     loader.efi.canTouchEfiVariables = true;
 #    loader.systemd-boot.device = "/dev/sda/sda1";
 
