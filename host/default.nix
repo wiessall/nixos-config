@@ -22,6 +22,7 @@
   ]
   # Include extra if exists for specified host
   ++ lib.optional (builtins.pathExists (./. + "/${hostname}/extra.nix")) ./${hostname}/extra.nix
+  ++ lib.optional (builtins.pathExists (./. + "/${hostname}/extra.nix")) ./${hostname}/battery.nix
   # Include desktop config if a desktop is defined
   ++ lib.optional (builtins.isString desktop) ./common/desktop;
 
