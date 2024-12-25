@@ -1,4 +1,8 @@
 {
+  services = {
+    fwupd.enable = true;
+    power-profiles-daemon.enable = true;
+  };
 
   environment.persistence."/persistent" = {
     enable = true;  # NB: Defaults to true, not needed

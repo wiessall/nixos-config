@@ -1,8 +1,8 @@
-{ inputs, lib, ... }:
+{ inputs, lib, pkgs, ... }:
 {
   imports = [
     inputs.disko.nixosModules.disko
-    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-extreme-gen3
+    inputs.nixos-hardware.nixosModules.framework-13-7040-amd
     ../common/hardware/bluetooth.nix
 
     (import ./disks.nix { inherit lib; })
@@ -17,6 +17,9 @@
       assertion = true;
       message = "host/vm/hardware.nix is loaded successfully.";
     }
+  ];
+  environment.systemPackages = [
+    pkgs.linuxKernel.packages.linux_zen.framework-laptop-kmod
   ];
 }
 

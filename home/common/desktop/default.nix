@@ -26,6 +26,7 @@
     kdePackages.kdepim-runtime
     kdePackages.kontact
     kdePackages.libkdepim
+    kdePackages.networkmanager-qt
     kdePackages.pimcommon
     kdePackages.pim-data-exporter
     kdePackages.qtstyleplugin-kvantum

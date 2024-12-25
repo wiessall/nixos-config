@@ -31,6 +31,7 @@
       modules = [
 	inputs.plasma-manager.homeManagerModules.plasma-manager
 	inputs.catppuccin.homeManagerModules.catppuccin
+        inputs.sops-nix.homeManagerModules.sops
 	../home
       ];
     };
@@ -63,6 +64,12 @@
         ../host
       ];
     };
+
+  parseFile = { path }: 
+  let
+    content = builtins.readFile path;
+  in
+    builtins.fromJSON (builtins.toJSON (builtins.importJSON content));
 
   forAllSystems = inputs.nixpkgs.lib.genAttrs [
     "aarch64-linux"
