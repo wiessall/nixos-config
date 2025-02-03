@@ -12,11 +12,16 @@
     ./hardware.nix
     ./sops.nix
     ../services/openssh.nix
+    ../services/mysql.nix
   ];
 
   networking = {
     hostName = hostname;
     useDHCP = lib.mkDefault true;
+    firewall = rec {
+      allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
+      allowedUDPPortRanges = allowedTCPPortRanges;
+    };
   };
 
   environment.systemPackages = (import ./packages.nix { inherit pkgs; }).basePackages;

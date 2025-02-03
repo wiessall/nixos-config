@@ -4,7 +4,7 @@
   - [X] kontact (KDE calendar, etc)
   - [ ] calculator
   - [X] openconnect-sso
-** TODO Setup [10/16]
+** TODO Setup [11/16]
   - [X] openconnect-sso
     + [X] add new ssh key to [[https://pwtools.embl.de/sshkey][EMBL pwtools]]
   - [X] micromamba \w vscode
@@ -20,7 +20,7 @@
     + plasma-nm loads the QT5 version
     + kdePackages.plasma-nm loads the *correct* Qt6 version
     + ~kdePackages.plasma-nm~ also provides the correct widget
-  - [ ] ssh-config
+  - [X] ssh-config
     + probably nicer with sops-nix
     + how can home-manager have access to sops secrets without running a user-level sops module?
     + https://foo-dogsquared.github.io/nixos-config/03-project-specific-setup/03-secrets-management/

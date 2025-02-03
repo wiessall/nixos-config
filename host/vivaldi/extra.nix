@@ -1,8 +1,15 @@
+{ pkgs, ... }:
+
 {
   services = {
     fwupd.enable = true;
     power-profiles-daemon.enable = true;
+    tailscale.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    tailscale
+  ];
 
   environment.persistence."/persistent" = {
     enable = true;  # NB: Defaults to true, not needed

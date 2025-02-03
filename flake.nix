@@ -107,6 +107,8 @@
       in
       import ./shell.nix { inherit pkgs; }
     );
+    # Get rid of no channel error message
+    config.nix.channel.enable = false;
   };
 }
 

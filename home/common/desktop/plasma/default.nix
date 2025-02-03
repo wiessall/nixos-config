@@ -4,6 +4,8 @@
   imports = [ "${inputs.plasma-manager}/modules" ];
 
 
+  services.kdeconnect.enable = true;
+
   home.packages = with pkgs; [
     kdePackages.plasma-nm
 #    mac-theme

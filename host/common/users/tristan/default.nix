@@ -21,6 +21,8 @@ in
         "plugdev"
         "render"
         "lxd"
+	"lp"
+	"scanner"
 
       ];
 

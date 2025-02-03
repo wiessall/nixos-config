@@ -10,6 +10,10 @@
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # Put here to try to make digital clock sync with webdav calendars work
+  # see: https://github.com/NixOS/nixpkgs/issues/344025
+  programs.kde-pim.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";

@@ -57,6 +57,7 @@
     };
     packages = with pkgs; [
       micromamba
+      mysql-workbench
     ];
   };
 }

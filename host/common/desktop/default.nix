@@ -27,6 +27,7 @@ in
   ];
 
   hardware.graphics.enable = true;
+  hardware.sane.enable = true;
 
   # Enable location services
   location.provider = "geoclue2";

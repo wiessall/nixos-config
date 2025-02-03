@@ -25,11 +25,22 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
 #        path = "/run/secrets/example.yaml";
 	neededForUsers = true;
       };
-      "connections/netcup/hostname" = {};
-      "connections/netcup/user" = {};
- 
-      "connections/embl-hpc/hostname" = {};
-      "connections/embl-hpc/user" = {};
+      "connections/netcup/hostname" = {
+        mode = "0400";
+	owner = "tristan";
+      };
+      "connections/netcup/user" = {
+        mode = "0400";
+	owner = "tristan";
+      };
+      "connections/embl-hpc/hostname" = {
+        mode = "0400";
+	owner = "tristan";
+      };
+      "connections/embl-hpc/user" = {
+        mode = "0400";
+	owner = "tristan";
+      };
 
       "connections/embl-gitlab/hostname" = {};
       "connections/embl-gitlab/user" = {};

@@ -25,10 +25,13 @@ in
 #    jq.enable = true;
   };
 
-  services.gpg-agent = {
-    enable = true;
-    pinentryPackage = pkgs.pinentry-curses;
+  services = {
+    gpg-agent = {
+      enable = true;
+      pinentryPackage = pkgs.pinentry-curses;
+    };
   };
+
 
   home.packages = with pkgs; [
     git-lfs

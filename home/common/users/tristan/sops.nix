@@ -13,6 +13,18 @@ in
     secrets = {
       "connections/netcup/hostname" = {};
       "connections/netcup/user" = {};
+
+      "connections/embl-hpc/hostname" = {};                   "connections/embl-hpc/user" = {};
+
+      "connections/embl-gitlab/hostname" = {};
+      "connections/embl-gitlab/user" = {};
+
+      "connections/asari-DB/hostname" = {};
+      "connections/asari-DB/user" = {};
+
+      "connections/github/hostname" = {};
+      "connections/github/user" = {};
+
     };
   };
 }

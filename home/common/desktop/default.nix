@@ -23,6 +23,7 @@
     inkscape
     kdePackages.akonadi
     kdePackages.akonadi-import-wizard
+    kdePackages.kdepim-addons
     kdePackages.kdepim-runtime
     kdePackages.kontact
     kdePackages.libkdepim
@@ -38,14 +39,14 @@
     signal-desktop
     sops
     spotify
+    stirling-pdf
     texlive.combined.scheme-full
     thunderbird
     vlc
     wl-clipboard
     xdg-utils
     xorg.xlsclients
-    xournal
-    zoom
+    xournalpp
     zotero
   ];
 
