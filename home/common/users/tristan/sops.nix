@@ -14,10 +14,11 @@ in
       "connections/netcup/hostname" = {};
       "connections/netcup/user" = {};
 
-      "connections/embl-hpc/hostname" = {};                   "connections/embl-hpc/user" = {};
+      "connections/emblhpc/hostname" = {};
+      "connections/emblhpc/user" = {};
 
-      "connections/embl-gitlab/hostname" = {};
-      "connections/embl-gitlab/user" = {};
+      "connections/emblgitlab/hostname" = {};
+      "connections/emblgitlab/user" = {};
 
       "connections/asari-DB/hostname" = {};
       "connections/asari-DB/user" = {};

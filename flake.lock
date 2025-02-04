@@ -367,10 +367,10 @@
     "nix-secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1738580546,
-        "narHash": "sha256-GAx0pwSisJoKm1zmv0t9d4QVkIC1kPgFv4QXV7T9hTE=",
+        "lastModified": 1738588139,
+        "narHash": "sha256-O7VIeF6Pc/W0Ak6GyEH2aLCVjiqcodjiaojZ1uHF7uQ=",
         "ref": "main",
-        "rev": "4f484a76ee4a7ec2021aa182887be18dbd3147ec",
+        "rev": "1cc45368bb3748daa4f5e6323ec1b6269b3e9818",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/wiessall/nixos-secrets"

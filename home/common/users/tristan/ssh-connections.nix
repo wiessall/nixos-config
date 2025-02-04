@@ -3,13 +3,13 @@
   programs.ssh = {
     enable = true;
     matchBlocks = {
-      "embl-gitlab" = {
-        hostname = builtins.readFile config.sops.secrets."connections/embl-gitlab/hostname".path;
-        user = builtins.readFile config.sops.secrets."connections/embl-gitlab/user".path;
-	identityFile = "/home/tristan/.ssh/embl_gitlab";
-	forwardAgent = true;
-	port = 22;
-      };
+#      "emblgitlab" = {
+#        hostname = builtins.readFile config.sops.secrets."connections/emblgitlab/hostname".path;
+#        user = builtins.readFile config.sops.secrets."connections/emblgitlab/user".path;
+#	identityFile = "/home/tristan/.ssh/embl_gitlab";
+#	forwardAgent = true;
+#	port = 22;
+#      };
       "netcup" = {
         hostname = builtins.readFile config.sops.secrets."connections/netcup/hostname".path;
         user = builtins.readFile config.sops.secrets."connections/netcup/user".path;
@@ -24,9 +24,9 @@
 #	forwardAgent = true;
 #	port = 22;
 #      };
-#      "embl-hpc" = {
-#        hostname = builtins.readFile config.sops.secrets."connections/embl-hpc/hostname".path;
-#        user = builtins.readFile config.sops.secrets."connections/embl-hpc/user".path;
+#      "emblhpc" = {
+#        hostname = builtins.readFile config.sops.secrets."connections/emblhpc/hostname".path;
+#        user = builtins.readFile config.sops.secrets."connections/emblhpc/user".path;
 #	identityFile = "/home/tristan/.ssh/embl_hpc";
 #	forwardAgent = true;
 #	port = 22;

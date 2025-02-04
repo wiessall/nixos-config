@@ -33,17 +33,23 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
         mode = "0400";
 	owner = "tristan";
       };
-      "connections/embl-hpc/hostname" = {
+      "connections/emblhpc/hostname" = {
         mode = "0400";
 	owner = "tristan";
       };
-      "connections/embl-hpc/user" = {
+      "connections/emblhpc/user" = {
         mode = "0400";
 	owner = "tristan";
       };
 
-      "connections/embl-gitlab/hostname" = {};
-      "connections/embl-gitlab/user" = {};
+      "connections/emblgitlab/hostname" = {
+        mode = "0400";
+	owner = "tristan";
+      };
+      "connections/emblgitlab/user" = {
+        mode = "0400";
+	owner = "tristan";
+      };
 
       "connections/asari-DB/hostname" = {};
       "connections/asari-DB/user" = {};
