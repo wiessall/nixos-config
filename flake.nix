@@ -23,8 +23,8 @@
     lanzaboote.url = "github:nix-community/lanzaboote";
     lanzaboote.inputs.nixpkgs.follows = "unstable";
 
-#    sops-nix.url = "github:Mic92/sops-nix";
-#    sops-nix.inputs.nixpkgs.follows = "unstable";
+    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "unstable";
 
     libations.url = "github:jnsgruk/libations";
     libations.inputs.nixpkgs.follows = "unstable";

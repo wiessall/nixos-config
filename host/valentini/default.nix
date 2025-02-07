@@ -7,8 +7,11 @@
 }:
 {
   imports = [
-    ./common/base
-    ./common/services/openssh.nix
+	
+    ./boot.nix
+    ./hardware.nix
+    ../common/base
+    ../common/services/openssh.nix
     ./locale.nix
     ./sops.nix
   ];
