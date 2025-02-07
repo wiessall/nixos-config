@@ -23,8 +23,8 @@
     lanzaboote.url = "github:nix-community/lanzaboote";
     lanzaboote.inputs.nixpkgs.follows = "unstable";
 
-    sops-nix.url = "github:Mic92/sops-nix";
-    sops-nix.inputs.nixpkgs.follows = "unstable";
+#    sops-nix.url = "github:Mic92/sops-nix";
+#    sops-nix.inputs.nixpkgs.follows = "unstable";
 
     libations.url = "github:jnsgruk/libations";
     libations.inputs.nixpkgs.follows = "unstable";
@@ -74,6 +74,12 @@
 	system = "x86_64-linux";
         user = username;
       };    
+      "${username}@valentini" = libx.mkHome {
+        hostname = "valentini";
+	desktop = "plasma";
+	system = "x86_64-linux";
+        user = username;
+      };        
     };
     nixosConfigurations = {
       verdi = libx.mkHost {
@@ -86,8 +92,13 @@
         desktop = "plasma";
         pkgsInput = inputs.nixpkgs;
       };
+      valentini = libx.mkHost {
+        hostname = "valentini";
+        desktop = "plasma";
+        pkgsInput = inputs.nixpkgs;
+      };
     };
-        # Custom packages; acessible via 'nix build', 'nix shell', etc
+    # Custom packages; acessible via 'nix build', 'nix shell', etc
     packages = libx.forAllSystems (
       system:
         let
