@@ -7,10 +7,6 @@
 }:
 {
   imports = [
-    
-    ./hardware.nix
-    ../services/openssh.nix
-    ../services/mysql.nix
   ];
 
   networking = {
