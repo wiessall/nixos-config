@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   basePackages = with pkgs; [
+    btm
     curl
     file
     git

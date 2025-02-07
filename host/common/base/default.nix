@@ -8,9 +8,7 @@
 {
   imports = [
     
-    ./locale.nix
     ./hardware.nix
-    ./sops.nix
     ../services/openssh.nix
     ../services/mysql.nix
   ];
@@ -19,6 +17,7 @@
     hostName = hostname;
     useDHCP = lib.mkDefault true;
     firewall = rec {
+      # For KDE Konnect
       allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
       allowedUDPPortRanges = allowedTCPPortRanges;
     };

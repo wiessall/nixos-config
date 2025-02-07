@@ -16,7 +16,6 @@
     (./. + "/${hostname}/boot.nix")
     (./. + "/${hostname}/hardware.nix")
 
-    ./common/base
     ./common/users
     ./common/users/${username}
   ]

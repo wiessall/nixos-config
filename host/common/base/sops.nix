@@ -42,11 +42,11 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
 	owner = "tristan";
       };
 
-      "connections/emblgitlab/hostname" = {
+      "connections/embl-gitlab/hostname" = {
         mode = "0400";
 	owner = "tristan";
       };
-      "connections/emblgitlab/user" = {
+      "connections/embl-gitlab/user" = {
         mode = "0400";
 	owner = "tristan";
       };

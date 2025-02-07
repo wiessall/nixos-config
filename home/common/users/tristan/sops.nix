@@ -17,8 +17,8 @@ in
       "connections/emblhpc/hostname" = {};
       "connections/emblhpc/user" = {};
 
-      "connections/emblgitlab/hostname" = {};
-      "connections/emblgitlab/user" = {};
+      "connections/embl-gitlab/hostname" = {};
+      "connections/embl-gitlab/user" = {};
 
       "connections/asari-DB/hostname" = {};
       "connections/asari-DB/user" = {};
