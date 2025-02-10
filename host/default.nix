@@ -13,8 +13,7 @@
 
 {
   imports = [
-    (./. + "/${hostname}/boot.nix")
-    (./. + "/${hostname}/hardware.nix")
+    (./. + "/${hostname}")
 
     ./common/users
     ./common/users/${username}

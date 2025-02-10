@@ -16,5 +16,6 @@
     ../common/services/mysql.nix
     ../common/services/flatpaks.nix
     ../common/services/pipewire.nix
+    ../common/services/tailscale.nix
   ];
 }
