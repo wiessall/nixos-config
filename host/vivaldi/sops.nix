@@ -22,7 +22,6 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
 
     secrets = {
       tristan_passwd = {
-#        path = "/run/secrets/example.yaml";
 	neededForUsers = true;
       };
       "connections/netcup/hostname" = {

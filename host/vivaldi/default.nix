@@ -7,12 +7,14 @@
 }:
 {
   imports = [
+    ./boot.nix
+    ./hardware.nix
     ./locale.nix
     ./sops.nix
-    ./common/base
-    ./common/services/openssh.nix
-    ./common/services/mysql.nix
-    ./common/services/flatpaks.nix
-    ./common/services/pipewire.nix
+    ../common/base
+    ../common/services/openssh.nix
+    ../common/services/mysql.nix
+    ../common/services/flatpaks.nix
+    ../common/services/pipewire.nix
   ];
 }

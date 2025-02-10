@@ -17,13 +17,13 @@
 	forwardAgent = true;
 	port = 22;
       };    
-#      "github" = {
-#        hostname = builtins.readFile config.sops.secrets."connections/github/hostname".path;
-#        user = builtins.readFile config.sops.secrets."connections/github/user".path;
-#	identityFile = "/home/tristan/.ssh/id_ed25519";
-#	forwardAgent = true;
-#	port = 22;
-#      };
+      "github" = {
+        hostname = builtins.readFile config.sops.secrets."connections/github/hostname".path;
+        user = builtins.readFile config.sops.secrets."connections/github/user".path;
+	identityFile = "/home/tristan/.ssh/id_ed25519";
+	forwardAgent = true;
+	port = 22;
+      };
       "emblhpc" = {
         hostname = builtins.readFile config.sops.secrets."connections/emblhpc/hostname".path;
         user = builtins.readFile config.sops.secrets."connections/emblhpc/user".path;
