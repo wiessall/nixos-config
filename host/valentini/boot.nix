@@ -1,12 +1,12 @@
 { pkgs, lib, ... }:
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
+#    kernelPackages = pkgs.linuxPackages_latest;
     loader.efi.canTouchEfiVariables = true;
 
     initrd.systemd.enable = true;
     #enable secure boot
-    bootspec.enable = true; 
+    bootspec.enable = false; 
     #disable systemd boot: true for install
     loader.systemd-boot.enable = lib.mkForce true;
 
