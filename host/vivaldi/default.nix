@@ -17,5 +17,6 @@
     ../common/services/flatpaks.nix
     ../common/services/pipewire.nix
     ../common/services/tailscale.nix
+    ../common/services/backup.nix
   ];
 }

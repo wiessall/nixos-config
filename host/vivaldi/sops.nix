@@ -24,6 +24,14 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
       tristan_passwd = {
 	neededForUsers = true;
       };
+      "borg/vivaldi/user" = {
+        mode = "0400";
+	owner = "root";
+      };
+      "borg/vivaldi/pw" = {
+        mode = "0400";
+	owner = "root";
+      };
       "connections/netcup/hostname" = {
         mode = "0400";
 	owner = "tristan";
