@@ -10,17 +10,22 @@
   programs = {
     direnv = {
       enable = true;
+      nix-direnv.enable = true;
     };
   };
 
   home.packages = with pkgs; [
     age
+    aspell
+    aspellDicts.en
+    aspellDicts.de
     bitwarden-desktop
     catppuccin-gtk
     devenv
     gimp
     goldwarden
     inkscape
+    ispell
     kdePackages.akonadi
     kdePackages.akonadi-import-wizard
     kdePackages.kdepim-addons
@@ -31,10 +36,12 @@
     kdePackages.pimcommon
     kdePackages.pim-data-exporter
     kdePackages.qtstyleplugin-kvantum
-    libreoffice-qt-fresh
+    libreoffice-fresh
     mattermost-desktop
+    mermaid-cli
     musicpod
     pamixer
+    pandoc
     pavucontrol
     signal-desktop
     sops
@@ -47,6 +54,7 @@
     xdg-utils
     xorg.xlsclients
     xournalpp
+    zip
     zotero
   ];
 

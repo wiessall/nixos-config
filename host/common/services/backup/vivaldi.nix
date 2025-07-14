@@ -1,4 +1,5 @@
-_: {
+{ config, pkgs, ... }:
+{
 
   # In order to mount the backup to restore files, perform the following:
   #
@@ -10,13 +11,20 @@ _: {
   #
   #    borg-job-borgbase umount backup
   services.borgbackup.jobs."vivaldi" = {
-    paths = [ "/home" "/etc" "/root" "/var" ];
+    paths = "/home/tristan/test";
     exclude = [
-      "**/Downloads"
-      "**/.cache"
-      "/var/tmp"
+#      "**/Downloads"
+#      "**/.cache"
+#      "/var/tmp"
     ];
-    repo = "ssh://${config.sops.secrets."borg/vivaldi/user".path}@valentini/mnt/borg1/borg";
+    user = "root";
+    repo = "root@100.103.126.11:/mnt/borg2/borg_repos/TEST";
+#    doInit = false;
+#    persistentTimer = true;
+#    inhibitsSleep = true;
+    environment = {
+      ARCHIVE = "/mnt/borg2/borg_repos/TEST";
+    };
     startAt = "*-*-* 12:00:00";
   };
 }
