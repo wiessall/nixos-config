@@ -13,6 +13,7 @@
     ./sops.nix
     ../common/services/backup
     ../common/base
+    ../common/services/podman.nix
     ../common/services/openssh.nix
     ../common/services/mysql.nix
     ../common/services/flatpaks.nix
