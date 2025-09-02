@@ -5,7 +5,7 @@
 
     # Rust tooling
     cargo
-    rust-analyzer
+#    rust-analyzer
     rustfmt
     rustc
 
