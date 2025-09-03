@@ -31,24 +31,21 @@
 	forwardAgent = true;
 	port = 22;
       };
-#      "asari-DB" = {
-#        hostname = builtins.readFile config.sops.secrets."connections/asari-DB/hostname".path;
-#        user = builtins.readFile config.sops.secrets."connections/asari-DB/user".path;
-#	identityFile = "/home/tristan/.ssh/embl_hpc";
-#	forwardAgent = true;
-#	port = 22;
-#      };
+      "asari-DB" = {
+        hostname = builtins.readFile config.sops.secrets."connections/asari-DB/hostname".path;
+        user = builtins.readFile config.sops.secrets."connections/asari-DB/user".path;
+	identityFile = "/home/tristan/.ssh/embl_hpc";
+	forwardAgent = true;
+	port = 22;
+      };
     };
   };
-  home.file.".ssh/config".onChange = ''chmod 600 ~/.ssh/config'';
-#  home.file.".ssh/config" = {
-#    source = "/home/tristan/nix/nixos-config/config_source";
-#    onChange = ''cat ~/.ssh/config_source > ~/.ssh/config && chmod 600 ~/.ssh/config'';
-#  };
-#  home.file.".ssh/my-server_key" = {
-#    text = sshSecrets.connections."my-server".identityFile;
-#    onChange = ''
-#      chmod 0600 ~/.ssh/my-server_key
-#    '';
-#  };
+
+  # See: https://github.com/nix-community/home-manager/issues/322#issuecomment-1856128020 
+  # See: https://github.com/nix-community/home-manager/pull/7074
+  # See: https://github.com/nix-community/home-manager/issues/3090
+  home.file.".ssh/config" = {
+    target = ".ssh/config_source";
+    onChange = ''cat ~/.ssh/config_source > ~/.ssh/config && chmod 400 ~/.ssh/config'';
+  };
 }
