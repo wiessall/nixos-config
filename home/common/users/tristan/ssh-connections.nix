@@ -41,6 +41,10 @@
     };
   };
   home.file.".ssh/config".onChange = ''chmod 600 ~/.ssh/config'';
+#  home.file.".ssh/config" = {
+#    source = "/home/tristan/nix/nixos-config/config_source";
+#    onChange = ''cat ~/.ssh/config_source > ~/.ssh/config && chmod 600 ~/.ssh/config'';
+#  };
 #  home.file.".ssh/my-server_key" = {
 #    text = sshSecrets.connections."my-server".identityFile;
 #    onChange = ''

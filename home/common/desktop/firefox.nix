@@ -14,7 +14,8 @@
 	};
       };
       profiles.myprofile = {
-        extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+	extensions.force = true;
+        extensions.packages = with inputs.firefox-addons.packages.${pkgs.system}; [
       	    bitwarden
             consent-o-matic
     	    cookie-autodelete
@@ -67,7 +68,7 @@
           # Disables cross-origin sub-resources from opening HTTP authentication credentials dialogs
           "network.auth.subresource-http-auth-allow" = 1;
         };
-        search.default = "DuckDuckGo";
+        search.default = "ddg";
 
        };
     };

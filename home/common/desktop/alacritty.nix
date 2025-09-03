@@ -5,11 +5,10 @@ in
 {
   programs.alacritty = {
     enable = true;
-    catppuccin.enable = true;
     settings = {
       terminal.shell = {
         program = "${pkgs.zsh}/bin/zsh";
-        args = [ "-c" "tmux attach || tmux" ];
+        args = [ "-c" "tmux attach || ${pkgs.tmux}/bin/tmux" ];
       };
       env = {
         TERM = "alacritty";

@@ -4,7 +4,7 @@
     vscode = {
       enable = true;
       package = pkgs.vscodium;
-      extensions = with pkgs.vscode-marketplace ; [
+      profiles.default.extensions = with pkgs.vscode-marketplace ; [
         aaron-bond.better-comments
         bierner.docs-view
         bierner.markdown-preview-github-styles

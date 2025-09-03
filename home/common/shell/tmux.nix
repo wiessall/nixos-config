@@ -3,9 +3,6 @@ _: {
     tmate.enable = true;
 
     tmux = {
-      enable = true;
-      catppuccin.enable = true;
-
       aggressiveResize = true;
       baseIndex = 1;
       clock24 = true;
@@ -21,8 +18,8 @@ _: {
         set-option -ga terminal-overrides ",alacritty:Tc"
 
         # Catppuccin options
-        # set -g @catppuccin_host 'on'
-        # set -g @catppuccin_window_tabs_enabled 'on'
+        set -g @catppuccin_host 'on'
+        set -g @catppuccin_window_tabs_enabled 'on'
       '';
     };
   };
