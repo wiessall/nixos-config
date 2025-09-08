@@ -21,10 +21,14 @@
     gimp
     goldwarden
     inkscape
+    kdePackages.akonadi
+    kdePackages.kdepim-runtime
+    kdePackages.kontact
     kdePackages.qtstyleplugin-kvantum
     libreoffice-qt-fresh
     mattermost-desktop
     musicpod
+    nextcloud-client
     pamixer
     pavucontrol
     signal-desktop

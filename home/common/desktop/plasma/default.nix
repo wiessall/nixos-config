@@ -5,7 +5,7 @@
 
 
   home.packages = with pkgs; [
-    plasma-nm
+    kdePackages.plasma-nm
 #    mac-theme
   ];
 
