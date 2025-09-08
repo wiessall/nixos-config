@@ -35,5 +35,10 @@ in
   environment.sessionVariables = {
     EDITOR = "vim";
   };
+  services.flatpak.packages = [
+        "flathub:app/com.nextcloud.desktopclient.nextcloud//stable"
+        "flathub:app/org.mozilla.firefox//stable"
+        "flathub:app/org.signal.Signal//stable"
+  ];
 }
 

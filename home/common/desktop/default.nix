@@ -3,7 +3,6 @@
   imports = [
     (./. + "/${desktop}")
     (../users + "/${username}")
-    ./firefox.nix
     ./alacritty.nix
   ];
 
@@ -23,13 +22,7 @@
     catppuccin-gtk
     devenv
     gimp
-    goldwarden
     inkscape
-<<<<<<< HEAD
-    kdePackages.akonadi
-    kdePackages.kdepim-runtime
-    kdePackages.kontact
-=======
     ispell
     kdePackages.akonadi
     kdePackages.akonadi-import-wizard
@@ -40,17 +33,14 @@
     kdePackages.networkmanager-qt
     kdePackages.pimcommon
     kdePackages.pim-data-exporter
->>>>>>> print
     kdePackages.qtstyleplugin-kvantum
     libreoffice-fresh
     mattermost-desktop
     mermaid-cli
     musicpod
-    nextcloud-client
     pamixer
     pandoc
     pavucontrol
-    signal-desktop
     sops
     spotify
     stirling-pdf

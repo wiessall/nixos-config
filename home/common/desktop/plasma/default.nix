@@ -153,8 +153,8 @@
       };
 
       mediacontrol = {
-        "mediavolumedown" = "volume down";
-        "mediavolumeup" = "volume up";
+        "volumedown" = "volume down";
+        "volumeup" = "volume up";
         "nextmedia" = "Media Next";
         "pausemedia" = "Media Pause";
         "playmedia" = "media playback";
@@ -223,7 +223,6 @@
         immutable = true;
       };
 
-      "kxkbrc"."Layout"."Options" = "caps:swapescape";
       "kxkbrc"."Layout"."ResetOldOptions" = true;
       "plasma-localerc"."Formats"."LANG" = "en_US.UTF-8";
       "spectaclerc"."ImageSave"."translatedScreenshotsFolder" = "Screenshots";

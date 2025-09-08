@@ -21,13 +21,11 @@
         "flathub:app/app.drey.Dialect//stable"
         "flathub:app/com.rtosta.zapzap//stable"
         "flathub:app/org.gnome.Snapshot//stable"
-        "flathub:app/com.nextcloud.desktopclient.nextcloud//stable"
         "flathub:app/org.kde.kmahjongg//stable"
         "flathub:app/org.kde.kpat//stable"
         "flathub:app/org.gnome.Maps//stable"
         "flathub:app/app.organicmaps.desktop//stable"
         "flathub:app/org.chromium.Chromium//stable"
-        "flathub:app/org.mozilla.firefox//stable"
       ];
     };
   };
