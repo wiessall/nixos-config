@@ -12,13 +12,13 @@ rec {
   inherit colours;
 
   catppuccin = {
-    flavor = "macchiato";
+    flavor = "mocha";
     accent = "green";
     size = "standard";
   };
 
   gtkTheme = {
-    name = "catppuccin-macchiato-green-standard";
+    name = "catppuccin-mocha-green-standard";
     package = pkgs.catppuccin-gtk.override {
       inherit (catppuccin) size;
       variant = catppuccin.flavor;
@@ -27,9 +27,9 @@ rec {
   };
 
   qtTheme = {
-    name = "Catppuccin-Macchiato-Green";
+    name = "Catppuccin-Mocha-Green";
     package = pkgs.catppuccin-kvantum.override {
-      variant = "Macchiato";
+      variant = "Mocha";
       accent = "Green";
     };
   };
@@ -57,8 +57,8 @@ rec {
       package = pkgs.inter;
     };
     monospace = {
-      name = "MesloLGSDZ Nerd Font Mono";
-      package = pkgs.nerdfonts.override { fonts = [ "Meslo" ]; };
+      name = "JetBrainsMono Nerd Font";
+      package = pkgs.nerd-fonts.jetbrains-mono; #.override { fonts = [ "Meslo" ]; };
     };
     emoji = {
       name = "Joypixels";

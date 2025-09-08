@@ -5,6 +5,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    impermanence.url = "github:nix-community/impermanence";
+    impermanence.inputs.nixpkgs.follows = "unstable";
 
     catppuccin.url = "github:catppuccin/nix";
 
@@ -38,6 +40,12 @@
     flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
     flatpaks.inputs.nixpkgs.follows = "unstable";
 
+    openconnect-sso = {
+      url = "github:jcszymansk/openconnect-sso";
+#      rev = "8af720732267ee07ba4451f9e5176ab4bc86104f";
+    };
+
+
     nix-secrets = {
       url = "git+ssh://git@github.com/wiessall/nixos-secrets?ref=main&shallow=1";
       flake = false;
@@ -48,7 +56,7 @@
   let
     inherit (self) outputs;
     stateVersion = "24.05";
-    username = "paola";
+    username = "tristan";
     libx = import ./lib {
       inherit self inputs outputs stateVersion username;
     };
@@ -60,8 +68,8 @@
 	system = "x86_64-linux";
         user = username;
       };
-      "${username}@vm" = libx.mkHome {
-        hostname = "vm";
+      "${username}@vivaldi" = libx.mkHome {
+        hostname = "vivaldi";
 	desktop = "plasma";
 	system = "x86_64-linux";
         user = username;
@@ -73,8 +81,8 @@
         desktop = "plasma";
         pkgsInput = inputs.nixpkgs;
       };
-      vm = libx.mkHost {
-        hostname = "vm";
+      vivaldi = libx.mkHost {
+        hostname = "vivaldi";
         desktop = "plasma";
         pkgsInput = inputs.nixpkgs;
       };
@@ -99,6 +107,8 @@
       in
       import ./shell.nix { inherit pkgs; }
     );
+    # Get rid of no channel error message
+    config.nix.channel.enable = false;
   };
 }
 

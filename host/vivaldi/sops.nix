@@ -22,8 +22,15 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
 
     secrets = {
       tristan_passwd = {
-#        path = "/run/secrets/example.yaml";
 	neededForUsers = true;
+      };
+      "borg/vivaldi/user" = {
+        mode = "0400";
+	owner = "root";
+      };
+      "borg/vivaldi/pw" = {
+        mode = "0400";
+	owner = "root";
       };
       "connections/netcup/hostname" = {
         mode = "0400";

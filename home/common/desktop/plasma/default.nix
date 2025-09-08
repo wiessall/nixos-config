@@ -4,6 +4,8 @@
   imports = [ "${inputs.plasma-manager}/modules" ];
 
 
+  services.kdeconnect.enable = true;
+
   home.packages = with pkgs; [
     kdePackages.plasma-nm
 #    mac-theme
@@ -23,7 +25,7 @@
 #      cursor.theme = "WhiteSur-cursors";
 #      iconTheme = "WhiteSur-light";
       windowDecorations.library = "Catppuccin";
-      windowDecorations.theme = "__aurorae__svg__CatppuccinMocha-Modern";
+      windowDecorations.theme = "__aurorae__svg__CatppuccinLatte-Modern";
       wallpaper = ./rolling_hills.jpg;
     };
 
@@ -54,7 +56,7 @@
         height = 26;
 	floating = true;
         widgets = [ 
-          "org.kde.plasma.appmenu"
+#          "org.kde.plasma.appmenu"
           "org.kde.plasma.panelspacer"
 	  {
             name = "org.kde.plasma.digitalclock";
@@ -223,7 +225,7 @@
 
       "kxkbrc"."Layout"."Options" = "caps:swapescape";
       "kxkbrc"."Layout"."ResetOldOptions" = true;
-      "plasma-localerc"."Formats"."LANG" = "it_IT.UTF-8";
+      "plasma-localerc"."Formats"."LANG" = "en_US.UTF-8";
       "spectaclerc"."ImageSave"."translatedScreenshotsFolder" = "Screenshots";
       "spectaclerc"."VideoSave"."translatedScreencastsFolder" = "Screencasts";
     };

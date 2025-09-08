@@ -39,11 +39,19 @@
 
     ];
     config = {
+      # Get rid of no channel error message
+      nix.channel.enable = false;
       # Disable if you don't want unfree packages
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
       permittedInsecurePackages = [ "electron-25.9.0" ];
+     nixpkgs.config.allowUnfreePredicate = pkg:
+   builtins.elem (lib.getName pkg) [
+     "joypixels"
+   ];
+ nixpkgs.config.joypixels.acceptLicense = true;
     };
   };
+
 }

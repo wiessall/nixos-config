@@ -30,7 +30,8 @@
       };
       modules = [
 	inputs.plasma-manager.homeManagerModules.plasma-manager
-	inputs.catppuccin.homeManagerModules.catppuccin
+	inputs.catppuccin.homeModules.catppuccin
+        inputs.sops-nix.homeManagerModules.sops
 	../home
       ];
     };
@@ -58,10 +59,17 @@
       modules = [
 	inputs.lanzaboote.nixosModules.lanzaboote
 	inputs.sops-nix.nixosModules.sops
-	inputs.flatpaks.nixosModules.declarative-flatpak
+	inputs.impermanence.nixosModules.impermanence
+	inputs.flatpaks.nixosModule
         ../host
       ];
     };
+
+  parseFile = { path }: 
+  let
+    content = builtins.readFile path;
+  in
+    builtins.fromJSON (builtins.toJSON (builtins.importJSON content));
 
   forAllSystems = inputs.nixpkgs.lib.genAttrs [
     "aarch64-linux"

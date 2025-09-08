@@ -1,13 +1,13 @@
+{ config, ...} :
 {
   programs = {
     zsh = {
       enable = true;
-      dotDir = "./config/zsh";
+      dotDir = config.home.homeDirectory + "/config/zsh";
       enableCompletion = true;
 #      autosuggestion.enable = true;
       syntaxHighlighting = {
         enable = true;
-        catppuccin.enable = true;
       };
       defaultKeymap = "vicmd";
       history = {
@@ -20,15 +20,13 @@
         share = true;
       };
       shellAliases = {
-        ls = "eza -gl --git --color=automatic";
+        ls = "eza -gla --git --time-style=\"+%Y-%m-%d\" --color=automatic";
         tree = "eza --tree";
         cat = "bat";
      };
-     initExtra = ''
+     initContent = ''
        bindkey '^R' history-incremental-search-backward
        '';
-
-
     };
   };
 }

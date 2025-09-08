@@ -10,14 +10,20 @@
   services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # Put here to try to make digital clock sync with webdav calendars work
+  # see: https://github.com/NixOS/nixpkgs/issues/344025
+  programs.kde-pim.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "it";
-    variant = "IT";
+    layout = "us";
   };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+# services.printing.drivers = [
+#   (pkgs.callPackage ./brother-dcp195c.nix { })
+# ];
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;

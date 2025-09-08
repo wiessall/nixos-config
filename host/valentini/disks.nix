@@ -21,16 +21,16 @@ in
     preLVM = true;
   };
 
-  environment.etc = {
-    "crypttab".text = ''
-      data /dev/disk/by-partlabel/data /etc/data.keyfile
-    '';
-  };
+#  environment.etc = {
+#    "crypttab".text = ''
+#      cryptroot /dev/disk/by-partlabel/main /etc/data.keyfile
+#    '';
+#  };
 
 
   disko.devices = {
     disk = {
-      sda = {
+      main = {
         device = builtins.elemAt disks 0;
 	type = "disk";
 	content = {
@@ -43,6 +43,7 @@ in
 	        type = "filesystem";
 		format = "vfat";
 		mountpoint = "/boot";
+    mountOptions = [ "defaults" ];
 	      };
 	    };
 	    # Luks encrypted data partition/subvolumes
@@ -69,18 +70,10 @@ in
 		      mountpoint = "/nix";
 		      mountOptions = defaultBtrfsOpts;
 		    };
-		    "@home" = {
-		      mountpoint = "/home";
+	            "@persistent" = {
+		      mountpoint = "/persistent";
 		      mountOptions = defaultBtrfsOpts;
-		    };
-		    "@var" = {
-		      mountpoint = "/var";
-		      mountOptions = defaultBtrfsOpts;
-		    };
-		    "@snapshots" = {
-		      mountpoint = "/.snapshots";
-		      mountOptions = defaultBtrfsOpts;
-		    };
+	            };
 		  };
 		};
        	      };
@@ -90,4 +83,5 @@ in
       };
     };
   };
+  fileSystems."/persistent".neededForBoot = true;
 }

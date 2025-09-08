@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
   basePackages = with pkgs; [
+    borgbackup
+    bottom
     curl
     file
     git

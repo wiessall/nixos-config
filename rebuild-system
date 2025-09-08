@@ -1,0 +1,16 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash 
+
+# Update spacemacs
+# https://ironshark.org/posts/2024-06-rethinkrefactorrebuild-3/ 
+
+cd ~/.config/emacs
+git pull
+
+cd ~/nix/nixos-config
+git commit -am "Pre-Upgrade: $HOSTNAME $NIXOS_GENERATION"
+sudo nix flake update
+sudo nixos-rebuild switch --flake .#HOSTNAME --upgrade
+git commit -am "Upgraded: $HOSTNAME $NIXOS_GENERATION"
+git push
+

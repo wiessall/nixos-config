@@ -1,0 +1,23 @@
+{
+  hostname,
+  pkgs,
+  lib,
+  username,
+  ...
+}:
+{
+  imports = [
+    ./boot.nix
+    ./hardware.nix
+    ./locale.nix
+    ./sops.nix
+    ../common/services/backup
+    ../common/base
+    ../common/services/podman.nix
+    ../common/services/openssh.nix
+    ../common/services/mysql.nix
+    ../common/services/flatpaks.nix
+    ../common/services/pipewire.nix
+    ../common/services/tailscale.nix
+  ];
+}

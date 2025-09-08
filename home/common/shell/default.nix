@@ -5,16 +5,30 @@ in
 {
   imports = [
     ./bat.nix
+    ./git.nix
     ./starship.nix
     ./tmux.nix
     ./vim.nix
     ./zsh.nix
   ];
 
-#  catppuccin = {
-#    inherit (theme.catppuccin) flavor;
-#    inherit (theme.catppuccin) accent;
-#  };
+  catppuccin = {
+    enable = true;
+    inherit (theme.catppuccin) flavor;
+    inherit (theme.catppuccin) accent;
+    tmux = {
+      enable = true;
+    };
+    bat = {
+      enable = true;
+    };
+    alacritty = {
+      enable = true;
+    };
+    zsh-syntax-highlighting = {
+      enable = true;
+    };
+  };
 
   programs = {
     eza.enable = true;
@@ -24,13 +38,15 @@ in
 #    jq.enable = true;
   };
 
-  services.gpg-agent = {
-    enable = true;
-    pinentryPackage = pkgs.pinentry-curses;
+  services = {
+    gpg-agent = {
+      enable = true;
+      pinentry.package = pkgs.pinentry-curses;
+    };
   };
 
-#  home.packages = with pkgs; [
-#    age
-#    sops
-#  ];
+
+  home.packages = with pkgs; [
+    git-lfs
+  ];
 }

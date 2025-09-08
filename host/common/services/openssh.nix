@@ -5,8 +5,8 @@ _: {
     openFirewall = true;
     allowSFTP = true;
     settings = {
-      PasswordAuthentication = true;
-      PermitRootLogin = "yes";
+      PasswordAuthentication = false;
+      PermitRootLogin = "no";
     };
   };
 
