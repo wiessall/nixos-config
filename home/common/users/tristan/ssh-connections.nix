@@ -38,6 +38,13 @@
 	forwardAgent = true;
 	port = 22;
       };
+      "sti-portal" = {
+        hostname = builtins.readFile config.sops.secrets."connections/asari-DB/hostname".path;
+        user = builtins.readFile config.sops.secrets."connections/asari-DB/user".path;
+	identityFile = "/home/tristan/.ssh/sti_portal";
+	forwardAgent = true;
+	port = 22;
+	};
     };
   };
 

@@ -56,7 +56,7 @@
         height = 26;
 	floating = true;
         widgets = [ 
-          "org.kde.plasma.appmenu"
+#          "org.kde.plasma.appmenu"
           "org.kde.plasma.panelspacer"
 	  {
             name = "org.kde.plasma.digitalclock";
