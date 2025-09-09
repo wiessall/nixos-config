@@ -37,7 +37,7 @@
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "unstable";
 
-    flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
+    flatpaks.url = "github:in-a-dil-emma/declarative-flatpak/stable-v3";
     flatpaks.inputs.nixpkgs.follows = "unstable";
 
     openconnect-sso = {
@@ -56,7 +56,7 @@
   let
     inherit (self) outputs;
     stateVersion = "24.05";
-    username = "paola";
+    username = "tristan";
     libx = import ./lib {
       inherit self inputs outputs stateVersion username;
     };

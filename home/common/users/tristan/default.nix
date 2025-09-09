@@ -1,9 +1,10 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     inputs.sops-nix.homeManagerModules.sops
     ../../dev
 #    ../../emacs.nix
+    ../../desktop/firefox.nix
     ./ssh-connections.nix
     ./sops.nix
   ];

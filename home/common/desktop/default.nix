@@ -21,6 +21,7 @@
     bitwarden-desktop
     catppuccin-gtk
     devenv
+    kdePackages.discover
     gimp
     inkscape
     ispell

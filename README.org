@@ -2,7 +2,7 @@
 ** TODO Missing Packages [3/4]
   - [X] git-lfs
   - [X] kontact (KDE calendar, etc)
-  - [ ] calculator
+  - [X] calculator
   - [X] openconnect-sso
 ** TODO Setup [11/16]
   - [X] openconnect-sso
@@ -28,11 +28,18 @@
     + how can the nix config get that secret out of the file? The aim is to not store the secret in the nix store and having to refer to the secret-file's location there
   - [X] fingerprint scanning
   - [ ] sync calendars
-  - [ ] light/dark switches of tool bars are inverted
+  - [X] light/dark switches of tool bars are inverted
+    - not solvable
   - [ ] write style config package
   - [ ] nixfmt
   - [X] dev shell \w vscode
   - [ ] impermanence \luks crypt
+* Fixes
+  - [ ] auto-decrypt disk
+** Plasma-manager
+  - [X] Volume up/down
+  - [X] discover in menu bar
+  - [X] auto-hide menu bar
 * Overlays and Overrides
   - Use case: openconnect-sso package is broken, but there is a fork fixing this
   - Solution: point flake input to fork repo; add overlay and build the config

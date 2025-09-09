@@ -39,16 +39,21 @@
       # Windows-like panel at the bottom
       {
         location = "bottom";
-	floating = true;
-	hiding = "dodgewindows";
-	lengthMode = "fit";
-	height = 64;
+        floating = true;
+        hiding = "dodgewindows";
+        lengthMode = "fit";
+        height = 64;
         widgets = [
+          {
+            name = "org.kde.plasma.icontasks";
+            config.General = {
+              unhideOnAttention = false;
+            };
+          }
           "org.kde.plasma.kickoff"
-          "org.kde.plasma.icontasks"
           "org.kde.plasma.systemsettings"
           "org.kde.discover"
-                 ];
+          ];
       }
       # Global menu at the top
       {
@@ -79,16 +84,16 @@
     # Some mid-level settings:
     #
     shortcuts = {
-#      kmix = {
+     kmix = {
 #        "decrease_microphone_volume" = "Microphone Volume Down";
-#        "decrease_volume" = "Volume Down";
-#        "decrease_volume_small" = "Shift+Volume Down";
+       "decrease_volume" = "Volume Down";
+       "decrease_volume_small" = "Shift+Volume Down";
 #        "increase_microphone_volume" = "Microphone Volume Up";
-#        "increase_volume" = "Volume Up";
-#        "increase_volume_small" = "Shift+Volume Up";
+       "increase_volume" = "Volume Up";
+       "increase_volume_small" = "Shift+Volume Up";
 #        "mic_mute" = ["Microphone Mute" "Meta+Volume Mute,Microphone Mute" "Meta+Volume Mute,Mute Microphone"];
 #        "mute" = "Volume Mute";
-#      };
+     };
 
       ksmserver = {
         "Lock Session" = [
@@ -132,8 +137,8 @@
         "Switch to Screen to the Right" = "none";
         "Walk Through Windows" = "Meta+Tab";
         "Walk Through Windows (Reverse)" = "Meta+Shift+Tab";
-        "Walk Through Windows of Current Application" = "Ctrl+Tab";
-        "Walk Through Windows of Current Application (Reverse)" = "Shift+Ctrl+Tab";
+        # "Walk Through Windows of Current Application" = "Ctrl+Tab";
+        # "Walk Through Windows of Current Application (Reverse)" = "Shift+Ctrl+Tab";
         "Window Close" = "Meta+W";
         "Window Maximize" = "Meta+Up";
         "Window Minimize" = "Meta+Down";
@@ -153,8 +158,6 @@
       };
 
       mediacontrol = {
-        "volumedown" = "volume down";
-        "volumeup" = "volume up";
         "nextmedia" = "Media Next";
         "pausemedia" = "Media Pause";
         "playmedia" = "media playback";
