@@ -40,16 +40,17 @@
     flatpaks.url = "github:in-a-dil-emma/declarative-flatpak/stable-v3";
     flatpaks.inputs.nixpkgs.follows = "unstable";
 
+    nix-ld.url = "github:Mic92/nix-ld";
+    nix-ld.inputs.nixpkgs.follows = "nixpkgs";
+
     openconnect-sso = {
       url = "github:jcszymansk/openconnect-sso";
 #      rev = "8af720732267ee07ba4451f9e5176ab4bc86104f";
     };
-
-
-    nix-secrets = {
-      url = "git+ssh://git@github.com/wiessall/nixos-secrets?ref=main&shallow=1";
-      flake = false;
-    };
+   nix-secrets = {
+     url = "git+ssh://git@github.com/wiessall/nixos-secrets?ref=main&shallow=1";
+     flake = false;
+   };
   };
 
   outputs = { self, nixpkgs, unstable, ... }@inputs:

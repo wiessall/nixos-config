@@ -23,34 +23,41 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
     secrets = {
       tristan_passwd = {
 #        path = "/run/secrets/example.yaml";
-	neededForUsers = true;
+        neededForUsers = true;
       };
       "connections/netcup/hostname" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
       };
       "connections/netcup/user" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
       };
       "connections/emblhpc/hostname" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
       };
       "connections/emblhpc/user" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
       };
 
       "connections/embl-gitlab/hostname" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
       };
       "connections/embl-gitlab/user" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
       };
-
+      "connections/sti-portal/hostname" = {
+        mode = "0400";
+        owner = "tristan";
+      };
+      "connections/sti-portal/user" = {
+        mode = "0400";
+        owner = "tristan";
+      };
       "connections/asari-DB/hostname" = {};
       "connections/asari-DB/user" = {};
 

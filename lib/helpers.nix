@@ -57,10 +57,11 @@
           ;
       };
       modules = [
-	inputs.lanzaboote.nixosModules.lanzaboote
-	inputs.sops-nix.nixosModules.sops
-	inputs.impermanence.nixosModules.impermanence
-	inputs.flatpaks.nixosModule
+        inputs.lanzaboote.nixosModules.lanzaboote
+        inputs.sops-nix.nixosModules.sops
+        inputs.impermanence.nixosModules.impermanence
+        inputs.flatpaks.nixosModule
+        inputs.nix-ld.nixosModules.nix-ld
         ../host
       ];
     };

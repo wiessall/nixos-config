@@ -22,40 +22,48 @@ builtins.trace "Evaluated secretspath: ${secretspath}" {
 
     secrets = {
       tristan_passwd = {
-	neededForUsers = true;
+      neededForUsers = true;
       };
       "borg/vivaldi/user" = {
         mode = "0400";
-	owner = "root";
+        owner = "root";
       };
       "borg/vivaldi/pw" = {
         mode = "0400";
-	owner = "root";
+        owner = "root";
       };
       "connections/netcup/hostname" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
       };
       "connections/netcup/user" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
       };
       "connections/emblhpc/hostname" = {
         mode = "0400";
-	owner = "tristan";
+      owner = "tristan";
       };
       "connections/emblhpc/user" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
       };
 
       "connections/embl-gitlab/hostname" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
       };
       "connections/embl-gitlab/user" = {
         mode = "0400";
-	owner = "tristan";
+        owner = "tristan";
+      };
+      "connections/sti-portal/hostname" = {
+        mode = "0400";
+        owner = "tristan";
+      };
+      "connections/sti-portal/user" = {
+        mode = "0400";
+        owner = "tristan";
       };
 
       "connections/asari-DB/hostname" = {};

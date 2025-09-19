@@ -12,7 +12,6 @@
     ./locale.nix
     ./sops.nix
     ../common/services/backup
-    ../common/desktop/firefox.nix
     ../common/base
     ../common/services/podman.nix
     ../common/services/openssh.nix

@@ -26,6 +26,8 @@ in
       "connections/github/hostname" = {};
       "connections/github/user" = {};
 
+      "connections/sti-portal/hostname" = {};
+      "connections/sti-portal/user" = {};
     };
   };
 }

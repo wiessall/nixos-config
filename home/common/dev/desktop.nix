@@ -45,6 +45,7 @@
       enable = true;
       package = pkgs.emacs30-pgtk;
     };
+    nix-ld.dev.enable = true;
   };
   home = {
     file = {

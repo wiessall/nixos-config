@@ -29,6 +29,7 @@
 #   gopls
 
     # Nix tooling
+    devenv
     deadnix
     nil
     nix-init
