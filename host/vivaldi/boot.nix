@@ -8,11 +8,11 @@
     #enable secure boot
     bootspec.enable = true; 
     #disable systemd boot
-    loader.systemd-boot.enable = lib.mkForce false;
+    loader.systemd-boot.enable = lib.mkForce false; #lib.mkForce false;
 
     lanzaboote = {
       enable = true;
-      pkiBundle = "/etc/secureboot";
+      pkiBundle = "/var/lib/sbctl";
     };
 
 ## Impermanence

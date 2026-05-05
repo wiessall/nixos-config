@@ -47,7 +47,7 @@ in
   fonts = {
     packages = with pkgs; [
       liberation_ttf
-      ubuntu_font_family
+      ubuntu-classic
 
       theme.fonts.default.package
       theme.fonts.emoji.package

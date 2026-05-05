@@ -1,8 +1,9 @@
-{ pkgs, inputs, lib, self, ...}:
+{ pkgs, inputs, lib, self, config, ...}:
 {
   programs = {
     firefox = {
       enable = true;
+      configPath = ".mozilla/firefox";
       languagePacks = [ "de" "en-US" ];
       policies = {
         DisableTelemetry = true;
@@ -73,5 +74,5 @@
        };
     };
 };
-home.file.".mozilla/firefox/myprofile/search.json.mozlz4".enable = lib.mkDefault false;
+home.file.".config/mozilla/firefox/myprofile/search.json.mozlz4".enable = lib.mkDefault false;
 }

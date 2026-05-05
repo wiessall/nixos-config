@@ -21,9 +21,19 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-# services.printing.drivers = [
-#   (pkgs.callPackage ./brother-dcp195c.nix { })
-# ];
+  # Add Brother printer drivers
+  services.printing.drivers = [
+    pkgs.brlaser
+ #   pkgs.brgenml1lpr
+    pkgs.brgenml1cupswrapper
+  ];
+
+  # Automatic prnter discovery
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+    openFirewall = true;
+  };
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;

@@ -12,9 +12,11 @@
 #    source = .config/sops/age/keys.txt;
 #  };
   home.packages = with pkgs; [
-    goldwarden
     nextcloud-client
     signal-desktop
+    nerd-fonts.sauce-code-pro
+    android-studio
+    wakeonlan
   ];
 
   programs.plasma.configFile = { "kxkbrc"."Layout"."Options" = "caps:swapescape"; };

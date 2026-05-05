@@ -8,6 +8,7 @@
 #    rust-analyzer
     rustfmt
     rustc
+    sbctl
 
     gnumake
     gcc
@@ -34,7 +35,7 @@
     nil
     nix-init
 #    nixfmt #-plus
-    nixfmt-rfc-style
+    nixfmt
     nurl
     statix
 

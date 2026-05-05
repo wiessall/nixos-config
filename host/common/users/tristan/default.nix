@@ -23,6 +23,7 @@ in
         "lxd"
 	"lp"
 	"scanner"
+	"kvm"
 
       ];
 

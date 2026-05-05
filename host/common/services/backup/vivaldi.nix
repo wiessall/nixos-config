@@ -11,20 +11,51 @@
   #
   #    borg-job-borgbase umount backup
   services.borgbackup.jobs."vivaldi" = {
-    paths = "/home/tristan/test";
+    paths = [
+      "/home"
+      "/etc"
+      "/var"
+      "/root"
+    ];
     exclude = [
-#      "**/Downloads"
-#      "**/.cache"
-#      "/var/tmp"
+      "**/.cache"
+      "**/.direnv"
+      "**/node_modules"
+      "**/result"
+      "**/__pycache__"
+      "**/*.pyc"
+      "**/.npm"
+      "**/.npm-global"
+      "**/.cargo"
+      "**/.rustup"
+      "**/target"
+      "/home/tristan/micromamba"
+      "/home/tristan/Android"
+      "/home/tristan/VirtualBox VMs"
+      "/home/tristan/nix/*/result"
+      "/home/tristan/scikit_learn_data"
+      "/home/tristan/Downloads"
+      "/home/tristan/Zotero/cache"
+      "/home/tristan/Zotero/translators"
+      "/home/tristan/customFiles"
+      "/home/tristan/pipeline"
+      "/home/tristan/logs"
+      "/home/tristan/omero/tmp"
+      "/var/lib/flatpak/repo/tmp"
+      "/var/lib/docker"
+      "/var/lib/containerd"
+      "/var/cache"
+      "/var/tmp"
+      "/var/run"
     ];
     user = "root";
-    repo = "root@100.103.126.11:/mnt/borg2/borg_repos/TEST";
+    repo = "root@valentini:/mnt/borg1/borg_repos/vivaldi";
 #    doInit = false;
 #    persistentTimer = true;
 #    inhibitsSleep = true;
     environment = {
-      ARCHIVE = "/mnt/borg2/borg_repos/TEST";
+      ARCHIVE = "/mnt/borg1/borg_repos/vivaldi";
     };
-    startAt = "*-*-* 12:00:00";
+    startAt = "*-*-* 10:00:00";
   };
 }

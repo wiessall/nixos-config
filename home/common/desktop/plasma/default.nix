@@ -8,6 +8,7 @@
 
   home.packages = with pkgs; [
     kdePackages.plasma-nm
+    kdePackages.powerdevil
 #    mac-theme
   ];
 

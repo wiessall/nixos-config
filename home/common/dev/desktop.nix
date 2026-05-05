@@ -1,9 +1,12 @@
 { inputs, pkgs, config, ...}:
 {
   programs = {
-    vscode = {
+    vscodium = {
       enable = true;
-      package = pkgs.vscodium;
+#      package = pkgs.vscodium;
+      profiles.default.userSettings = {
+        "datawrangler.allowJupyterAccess" = true;
+      };
       profiles.default.extensions = with pkgs.vscode-marketplace ; [
         aaron-bond.better-comments
         bierner.docs-view
@@ -45,7 +48,6 @@
       enable = true;
       package = pkgs.emacs30-pgtk;
     };
-    nix-ld.dev.enable = true;
   };
   home = {
     file = {
@@ -57,7 +59,7 @@
       };
     };
     packages = with pkgs; [
-      micromamba
+#      micromamba
     ];
   };
 }

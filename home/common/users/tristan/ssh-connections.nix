@@ -50,6 +50,20 @@
         forwardAgent = true;
         port = 22;
       };
+      "fao-review" = {
+        hostname = "localhost";
+        user = "tristan";
+        identityFile = "/home/tristan/.ssh/google_compute_engine";
+        forwardAgent = true;
+        port = 2222;
+      };    
+      "fao-edge" = {
+        hostname = "localhost";
+        user = "tristan";
+        identityFile = "/home/tristan/.ssh/google_compute_engine";
+        forwardAgent = true;
+        port = 2223;
+      };      
     };
   };
 

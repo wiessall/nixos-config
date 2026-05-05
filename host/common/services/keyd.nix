@@ -15,6 +15,7 @@ _: {
   #      };
         extraConfig = ''
           # put here any extra-config, e.g. you can copy/paste here directly a configuration, just remove the ids part
+	[main]
   	pageup = home
   	pagedown = end
         '';

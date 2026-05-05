@@ -29,9 +29,9 @@
         username = user;
       };
       modules = [
-	inputs.plasma-manager.homeManagerModules.plasma-manager
+	inputs.plasma-manager.homeModules.plasma-manager
 	inputs.catppuccin.homeModules.catppuccin
-        inputs.sops-nix.homeManagerModules.sops
+        inputs.sops-nix.homeModules.sops
 	../home
       ];
     };
@@ -60,7 +60,7 @@
         inputs.lanzaboote.nixosModules.lanzaboote
         inputs.sops-nix.nixosModules.sops
         inputs.impermanence.nixosModules.impermanence
-        inputs.flatpaks.nixosModule
+        inputs.flatpaks.nixosModules.declarative-flatpak
         inputs.nix-ld.nixosModules.nix-ld
         ../host
       ];

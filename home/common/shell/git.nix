@@ -3,8 +3,8 @@
   programs = {
     git = {
       enable = true;
-      userEmail = "tristan.wiessalla@posteo.de";
-      userName = "Tristan Wiessalla";
+      settings.user.email = "tristan.wiessalla@posteo.de";
+      settings.user.name = "Tristan Wiessalla";
     };
   };
 }

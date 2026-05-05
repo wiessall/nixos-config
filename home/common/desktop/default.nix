@@ -26,7 +26,10 @@
     inkscape
     ispell
     kdePackages.akonadi
+    kdePackages.akonadi-calendar
     kdePackages.akonadi-import-wizard
+    kdePackages.kaccounts-providers # online accounts
+    kdePackages.kaccounts-integration  # online accounts
     kdePackages.kdepim-addons
     kdePackages.kdepim-runtime
     kdePackages.kontact
@@ -35,7 +38,10 @@
     kdePackages.pimcommon
     kdePackages.pim-data-exporter
     kdePackages.qtstyleplugin-kvantum
+    kdePackages.qtwebengine  # online accounts
     libreoffice-fresh
+#    libsForQt5.signond
+#    libsForQt5.qoauth
     mattermost-desktop
     mermaid-cli
     musicpod

@@ -11,5 +11,5 @@
     };
   };
 
-  environment.systemPackages = if (builtins.isString desktop) then [ pkgs.blueberry ] else [ ];
+  environment.systemPackages = if (builtins.isString desktop) then [ pkgs.blueman ] else [ ];
 }
